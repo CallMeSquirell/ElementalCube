@@ -1,4 +1,4 @@
-namespace Project.Scripts.GamePlay.Cube.Data.Face
+namespace Project.Scripts.GamePlay.Cube.Data.Faces
 {
     public enum FaceType
     {

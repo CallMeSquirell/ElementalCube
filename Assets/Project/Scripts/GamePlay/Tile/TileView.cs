@@ -1,49 +1,43 @@
-using Project.Scripts.Framework.Extensions;
-using Project.Scripts.GameControl.Models;
-using Project.Scripts.GamePlay.Cube.Data.Factory;
-using Project.Scripts.GamePlay.Cube.Factory;
+using Project.Scripts.Framework.MVP;
+using Project.Scripts.Framework.ResourceManagement;
+using Project.Scripts.GamePlay.Cube.Configs;
+using Project.Scripts.GamePlay.Cube.Data;
 using Project.Scripts.GamePlay.Cube.Views;
 using Project.Scripts.Input.Interfaces;
 using UnityEngine;
-using Zenject;
 
 namespace Project.Scripts.GamePlay.Tile
 {
-    public class TileView : MonoBehaviour, IClickable, ITouchStarted, ITouchEnded
+    public class TileView : BaseView<ITileData>, ITouchable
     {
         [SerializeField] private Transform _cubeContainer;
-        
-        private ICubeFactory _factory;
-        private CubeView _placedCubeShooter;
-        private ICubeDataFactory _dataFactory;
-        private IPlaceModel _placeModel;
 
-        [Inject]
-        private void Initialize(IPlaceModel placeModel, 
-            ICubeFactory cubeFactory, ICubeDataFactory dataFactory)
+        private CubeView _cubeView;
+        private CubeConfig _cubeConfig;
+
+        private void Awake()
         {
-            _dataFactory = dataFactory;
-            _placeModel = placeModel;
-            _factory = cubeFactory;
+            _cubeConfig = Config.Get<CubeConfig>();
+        }
+
+        protected override void Initialize()
+        {
+            Data.PlacedCube.BindAndInvoke(OnSelectedCubeUpdated);
         }
         
-        public void OnClicked()
+        private void OnSelectedCubeUpdated(ICubeData cubeData)
         {
-            if (!_placedCubeShooter.NonNull() && _placeModel.SelectedCube != null)
+            if (cubeData != null)
             {
-                var cubeData = _dataFactory.Create(_placeModel.SelectedCube);
-                _placedCubeShooter = _factory.Create(_cubeContainer);
-                _placedCubeShooter.SetData(cubeData);
+                _cubeView = Instantiator.InstantiatePrefabForComponent<CubeView>(_cubeConfig.Defenition.Prefab,
+                    _cubeContainer);
+                _cubeView.SetData(cubeData);
             }
         }
-
-        public void OnTouchStarted()
+        
+        protected override void UnBind()
         {
-        }
-
-        public void OnTouchEnded()
-        {
-            
+            Data.PlacedCube.UnBind(OnSelectedCubeUpdated);
         }
     }
 }

@@ -1,4 +1,4 @@
-using Project.Scripts.GamePlay.Cube.Data.Face.Provider;
+using Project.Scripts.GamePlay.Cube.Data.Faces.Provider;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
 
 namespace Project.Scripts.GamePlay.Cube.Data.Factory
@@ -12,7 +12,7 @@ namespace Project.Scripts.GamePlay.Cube.Data.Factory
             _faceDataProvider = faceDataProvider;
         }
 
-        public ICubeData Create(CubeStats cubeInfo)
+        public ICubeData Create(CubeInfo cubeInfo)
         {
             return new CubeData(_faceDataProvider.Provide(cubeInfo.Faces),
                 cubeInfo);

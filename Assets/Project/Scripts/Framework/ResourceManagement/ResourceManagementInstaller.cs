@@ -6,7 +6,7 @@ namespace Project.Scripts.Framework.ResourceManagement
     {
         public override void InstallBindings()
         {
-            Container.Bind<IConfig>().To<Config>();
+            
         }
     }
 }

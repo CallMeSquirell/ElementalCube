@@ -6,7 +6,7 @@ namespace Project.Scripts.GameControl.Models
 {
     public interface ICubeSetModel
     {
-        IReadOnlyList<CubeStats> CurrentCubeSet { get; }
+        IReadOnlyList<CubeInfo> CurrentCubeSet { get; }
         void RefreshAvailableCubeDataList();
     }
 }

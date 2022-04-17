@@ -4,19 +4,19 @@ using UnityEngine;
 
 namespace Project.Scripts.Framework.ResourceManagement
 {
-    public class Config : IConfig
+    public static class Config
     {
         private const string DefaultPath = "Config/";
         
-        private readonly Dictionary<Type, ScriptableObject> _configs = new Dictionary<Type, ScriptableObject>();
+        private static readonly Dictionary<Type, ScriptableObject> Configs = new Dictionary<Type, ScriptableObject>();
    
-        public T Get<T>() where T : ScriptableObject
+        public static T Get<T>() where T : ScriptableObject
         {
             var type = typeof(T);
-            if (!_configs.TryGetValue(type, out var config))
+            if (!Configs.TryGetValue(type, out var config))
             {
                 config = Resources.Load<T>(DefaultPath + type);
-                _configs.Add(type,config);
+                Configs.Add(type,config);
             }
             return (T) config;
         }

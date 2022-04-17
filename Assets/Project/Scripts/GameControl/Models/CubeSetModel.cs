@@ -8,10 +8,10 @@ namespace Project.Scripts.GameControl.Models
 {
     public class CubeSetModel : ICubeSetModel
     {
-        private IReadOnlyList<CubeStats> _currentCubeSet;
-        public List<CubeStats> AvailableCubeData { private set; get; }
+        private IReadOnlyList<CubeInfo> _currentCubeSet;
+        public List<CubeInfo> AvailableCubeData { private set; get; }
 
-        public IReadOnlyList<CubeStats> CurrentCubeSet
+        public IReadOnlyList<CubeInfo> CurrentCubeSet
         {
             get => _currentCubeSet;
             private set
@@ -21,14 +21,14 @@ namespace Project.Scripts.GameControl.Models
             }
         }
 
-        public CubeSetModel(IConfig config)
+        public CubeSetModel()
         {
-            CurrentCubeSet = config.Get<CubeConfig>().CubeSet;
+            CurrentCubeSet = Config.Get<CubeConfig>().CubeSet;
         }
 
         public void RefreshAvailableCubeDataList()
         {
-            AvailableCubeData = new List<CubeStats>(CurrentCubeSet);
+            AvailableCubeData = new List<CubeInfo>(CurrentCubeSet);
         }
     }
 }

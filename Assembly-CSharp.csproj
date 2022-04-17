@@ -62,6 +62,7 @@
      <Compile Include="Assets\Project\Scripts\Extenstions\FaceTypeConverter.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\BindableProperties\BindableProperty.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\BindableProperties\IBindableProperty.cs" />
+     <Compile Include="Assets\Project\Scripts\Framework\Extensions\EnumComparator.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\Extensions\LinQExtensions.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\Extensions\ObjectExtensions.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\Extensions\VectorExtensions.cs" />
@@ -93,13 +94,12 @@
      <Compile Include="Assets\Project\Scripts\Framework\Promises\IPromise.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\Promises\Promise.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\ResourceManagement\Config.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\ResourceManagement\IConfig.cs" />
      <Compile Include="Assets\Project\Scripts\Framework\ResourceManagement\ResourceManagementInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Configs\LevelConfig.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\CoreInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\GameSceneInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\GlobalInstaller.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\LevelSystem\Level.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\Installers\UIInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Loader\ILevelLoader.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Loader\LevelLoader.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Models\CubeSetModel.cs" />
@@ -120,33 +120,42 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Factory\ICubeDataFactory.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\ICubeData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\State\CubeState.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\CubeStats.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\ICubeStatsData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Factory\CubeFactory.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Factory\ICubeFactory.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\CubeInfo.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\ICubeInfo.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Installer\CubeInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\CubeShooterView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\CubeView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\ElementalCubeShooterView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Configs\EnemyConfig.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\EnemyData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\IEnemyData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\Stats\EnemyInfo.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\Stats\IEnemyInfo.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Installer\EnemyInstaller.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Views\EnemyView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Data\HealthData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Data\IHealthData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Hit.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\IHit.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Pool\HitPool.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Pool\IHitPool.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Slime\Configs\SlimeConfig.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Slime\Data\ISlimeData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Slime\Data\SlimeData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Slime\Data\Stats\ISlimeStats.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Slime\Data\Stats\SlimeStats.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Slime\Views\SlimeView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Health\IAttackTarget.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Level.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemySpawner.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemySpawnerData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\IEnemySpawnerData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\ITownHallData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\TownHall.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\TownHallData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\ITileData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Watcher\InRangeWatcher.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Interfaces\IClickable.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Interfaces\ITouchEnded.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Interfaces\ITouchStarted.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Interfaces\ITouchable.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\PlayerInputSystem.cs" />
+     <Compile Include="Assets\Project\Scripts\Input\Models\IInputData.cs" />
+     <Compile Include="Assets\Project\Scripts\Input\Models\InputData.cs" />
+     <Compile Include="Assets\Project\Scripts\Input\Processorors\IInputProcessor.cs" />
+     <Compile Include="Assets\Project\Scripts\Input\Processorors\Impl\TileInputProcessor.cs" />
+     <Compile Include="Assets\Project\Scripts\Input\System\ITouchable.cs" />
+     <Compile Include="Assets\Project\Scripts\Input\System\InputSystem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -386,18 +395,6 @@
  </Reference>
  <Reference Include="Zenject-usage">
  <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
- <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
- <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
- <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
- <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -755,14 +752,6 @@
     <ProjectReference Include="Zenject-Editor.csproj">
       <Project>{A1A1FDCF-0015-859F-C00B-F77F64E4E2DC}</Project>
       <Name>Zenject-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{513D6C4E-BED5-E45B-D217-C2707BBC1DBB}</Project>
-      <Name>Zenject-ReflectionBaking-Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{68669E5F-FF28-879B-6709-3753F1EE8EF3}</Project>
-      <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
       <Project>{395B9440-8CC7-1A13-64BF-39FA47ADE23B}</Project>

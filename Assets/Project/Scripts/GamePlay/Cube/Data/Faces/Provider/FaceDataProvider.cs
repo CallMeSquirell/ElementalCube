@@ -4,7 +4,7 @@ using System.Linq;
 using Project.Scripts.GamePlay.Cube.Data.Element;
 using Zenject;
 
-namespace Project.Scripts.GamePlay.Cube.Data.Face.Provider
+namespace Project.Scripts.GamePlay.Cube.Data.Faces.Provider
 {
     public class FaceDataProvider : IFaceDataProvider
     {

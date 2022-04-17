@@ -9,9 +9,9 @@ namespace Project.Scripts.GamePlay.Cube.Configs
     public class CubeConfig : ScriptableObject
     {
         [SerializeField] private ViewDefinition _defenition;
-        [SerializeField] private List<CubeStats> _cubeSet;
+        [SerializeField] private List<CubeInfo> _cubeSet;
 
-        public IReadOnlyList<CubeStats> CubeSet => _cubeSet;
+        public IReadOnlyList<CubeInfo> CubeSet => _cubeSet;
 
         public ViewDefinition Defenition => _defenition;
     }
