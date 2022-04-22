@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Project.Scripts.Framework.MVP.UI.Views;
+using Project.Scripts.Framework.MVP.Views;
 using Zenject;
 
 namespace Project.Scripts.Framework.MVP.DI.Binding
@@ -17,7 +17,7 @@ namespace Project.Scripts.Framework.MVP.DI.Binding
             _container = container;
         }
         
-        public IPresenterBinding BindView<T>() where T : WindowWindowView
+        public IPresenterBinding BindView<T>() where T : ManagedView
         {
             var presenterBinding = new PresenterBinding(_container);
             _bindings.Add(typeof(T), presenterBinding);

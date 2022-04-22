@@ -1,4 +1,5 @@
 using Project.Scripts.Framework.MVP;
+using Project.Scripts.Framework.MVVM;
 using Project.Scripts.Framework.ResourceManagement;
 using Project.Scripts.GamePlay.Cube.Configs;
 using Project.Scripts.GamePlay.Cube.Data;
@@ -29,7 +30,7 @@ namespace Project.Scripts.GamePlay.Tile
         {
             if (cubeData != null)
             {
-                _cubeView = Instantiator.InstantiatePrefabForComponent<CubeView>(_cubeConfig.Defenition.Prefab,
+                _cubeView = Instantiator.InstantiatePrefabForComponent<CubeView>(_cubeConfig.CubeView,
                     _cubeContainer);
                 _cubeView.SetData(cubeData);
             }

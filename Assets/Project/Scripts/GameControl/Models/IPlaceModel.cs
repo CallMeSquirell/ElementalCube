@@ -5,6 +5,6 @@ namespace Project.Scripts.GameControl.Models
 {
     public interface IPlaceModel
     {
-        CubeData SelectedCube { get; set; }
+        ICubeData SelectedCube { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Project.Scripts.Framework.MVP.UI.Views;
+using Project.Scripts.Framework.MVP.Views;
 using Zenject;
 
 namespace Project.Scripts.Framework.MVP.DI.Binding
@@ -10,32 +10,32 @@ namespace Project.Scripts.Framework.MVP.DI.Binding
         private readonly IInstantiator _instantiator;
         private Type _presenterType;
 
-        private readonly Dictionary<IWindowView, IPresenter> _createdPresenter 
-            = new Dictionary<IWindowView, IPresenter>();
+        private readonly Dictionary<IManagedView, IPresenter> _createdPresenter 
+            = new Dictionary<IManagedView, IPresenter>();
 
         public PresenterBinding(IInstantiator instantiator)
         {
             _instantiator = instantiator;
         }
 
-        public void To<P>() where P : IPresenter<IWindowView>
+        public void To<P>() where P : IPresenter<IManagedView>
         {
             _presenterType = typeof(P);
         }
 
-        public void CreatePresenter(IWindowView windowView, object payload = null)
+        public void CreatePresenter(IManagedView managedView, object payload = null)
         {
-            var args = payload != null ? new[] {windowView, payload} : new[] {windowView};
+            var args = payload != null ? new[] {managedView, payload} : new[] {managedView};
             var presenter = (IPresenter) _instantiator.Instantiate(_presenterType, args);
             presenter.Initialise();
-            _createdPresenter.Add(windowView, presenter);
+            _createdPresenter.Add(managedView, presenter);
         }
 
-        public void DestroyPresenter(IWindowView windowView)
+        public void DestroyPresenter(IManagedView managedView)
         {
-            var presenter = _createdPresenter[windowView];
+            var presenter = _createdPresenter[managedView];
             presenter.Dispose();
-            _createdPresenter.Remove(windowView);
+            _createdPresenter.Remove(managedView);
         }
     }
 }

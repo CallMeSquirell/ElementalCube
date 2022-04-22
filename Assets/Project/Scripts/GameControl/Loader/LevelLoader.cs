@@ -1,5 +1,5 @@
 using Project.Scripts.Framework.MVP.DI.Provider;
-using Project.Scripts.Framework.MVP.UI.Views;
+using Project.Scripts.Framework.MVP.Views;
 using Project.Scripts.Framework.ResourceManagement;
 using Project.Scripts.GamePlay.LevelSystem;
 using UnityEngine;
@@ -23,7 +23,7 @@ namespace Project.Scripts.GameControl.Loader
         private void Awake()
         {
             var level = _instantiator.InstantiatePrefab(Config.Get<LevelConfig>().Level);
-            foreach (var view in  level.GetComponentsInChildren<WindowWindowView>())
+            foreach (var view in  level.GetComponentsInChildren<ManagedView>())
             {
                 _provider.ProvideIncludeSubViesTo(view);
             }

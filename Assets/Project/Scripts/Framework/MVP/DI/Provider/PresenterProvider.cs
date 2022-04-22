@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using Project.Scripts.Framework.MVP.DI.Binding;
-using Project.Scripts.Framework.MVP.UI.Views;
+using Project.Scripts.Framework.MVP.Views;
 using UnityEngine;
 
 namespace Project.Scripts.Framework.MVP.DI.Provider
@@ -15,10 +15,10 @@ namespace Project.Scripts.Framework.MVP.DI.Provider
             _presenterContainer = presenterContainer;
         }
 
-        public void ProvideIncludeSubViesTo(IWindowView windowView, object payload = null)
+        public void ProvideIncludeSubViesTo(IManagedView managedView, object payload = null)
         {
-            var views = ((WindowWindowView) windowView).GetComponentsInChildren<WindowWindowView>(true);
-            ProvideTo(windowView, payload);
+            var views = ((ManagedView) managedView).GetComponentsInChildren<ManagedView>(true);
+            ProvideTo(managedView, payload);
             foreach (var subView in views.Skip(1))
             {
                 ProvideTo(subView, null);
@@ -26,15 +26,15 @@ namespace Project.Scripts.Framework.MVP.DI.Provider
         }
         
         public void ProvideTo(
-            IWindowView windowView,
+            IManagedView managedView,
             object payload)
         {
-            Type viewType = windowView.GetType();
+            Type viewType = managedView.GetType();
             var binding = _presenterContainer.GetBinding(viewType);
             if (binding != null)
             {
-                binding.CreatePresenter(windowView, payload);
-                windowView.Closed.Then(() => binding.DestroyPresenter(windowView));
+                binding.CreatePresenter(managedView, payload);
+                managedView.Closed += OnViewClosed;;
             }
             else
             {
@@ -42,5 +42,11 @@ namespace Project.Scripts.Framework.MVP.DI.Provider
             }
         }
 
+        private void OnViewClosed(IManagedView managedView)
+        {
+            managedView.Closed -= OnViewClosed;
+            Type viewType = managedView.GetType();
+            _presenterContainer.GetBinding(viewType).DestroyPresenter(managedView);
+        }
     }
 }

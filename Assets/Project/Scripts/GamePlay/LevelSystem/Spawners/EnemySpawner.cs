@@ -73,7 +73,7 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
 
         private void Spawn(IEnemyData data)
         {
-            var enemy = _instantiator.InstantiatePrefabForComponent<EnemyView>(_config.Definition.Prefab, _spawnPoint);
+            var enemy = _instantiator.InstantiatePrefabForComponent<EnemyView>(_config.Definition, _spawnPoint);
             enemy.SetData(data);
             enemy.Attack(Data.Target);
             data.Died += OnEnemyDied;

@@ -1,6 +1,7 @@
 using Project.Scripts.Framework.MVP.DI.Binding;
 using Project.Scripts.Framework.MVP.Installers;
 using Project.Scripts.GameControl.Models;
+using Project.Scripts.Input.Models;
 
 namespace Project.Scripts.GameControl.Installers
 {
@@ -13,8 +14,9 @@ namespace Project.Scripts.GameControl.Installers
 
         protected override void InstallModels()
         {
-            Container.Bind<ICubeSetModel>().To<CubeSetModel>();
-            Container.Bind<IPlaceModel>().To<PlaceModel>();
+            Container.Bind<ICubeSetModel>().To<CubeSetModel>().AsSingle();
+            Container.Bind<IInputData>().To<InputData>().AsSingle();
+            Container.Bind<IPlaceModel>().To<PlaceModel>().AsSingle();
         }
     }
 }

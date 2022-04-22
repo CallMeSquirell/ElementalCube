@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace Project.Scripts.Framework
+namespace Project.Scripts.Framework.Extensions
 {
-    public class EnumComparator : IEqualityComparer<Enum>
+    public class EnumComparator<T> : IEqualityComparer<T>
     {
-        public bool Equals(Enum x, Enum y)
+        public bool Equals(T x, T y)
         {
             if (x == null || y == null)
             {
@@ -20,7 +20,7 @@ namespace Project.Scripts.Framework
             return x.Equals(y);
         }
 
-        public int GetHashCode(Enum obj)
+        public int GetHashCode(T obj)
         {
             return obj.GetHashCode();
         }
