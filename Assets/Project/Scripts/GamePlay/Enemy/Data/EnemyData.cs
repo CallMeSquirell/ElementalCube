@@ -5,6 +5,7 @@ using Project.Scripts.GamePlay.Enemy.Data.Stats;
 using Project.Scripts.GamePlay.Health;
 using Project.Scripts.GamePlay.Health.Data;
 using Project.Scripts.GamePlay.Health.Hits;
+using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Enemy.Data
 {
@@ -16,8 +17,10 @@ namespace Project.Scripts.GamePlay.Enemy.Data
         public IBindableProperty<Element> CurrentElement => _currentElement;
         public IHealthData HealthData { get; }
         public IEnemyInfo Stats { get; }
-        
-        public EnemyData(IEnemyInfo stats)
+
+        public Transform Transform { get; }
+
+        public EnemyData(IEnemyInfo stats, Transform transform)
         {
             Stats = stats;
             

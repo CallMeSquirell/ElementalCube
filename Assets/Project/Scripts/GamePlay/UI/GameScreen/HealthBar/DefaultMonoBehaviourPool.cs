@@ -3,22 +3,20 @@ using UnityEngine;
 
 namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
 {
-    public class HealthBarPool : AbstractPool<HealthBar>
+    public class DefaultMonoBehaviourPool<T> : AbstractPool<T> where T : ObjectPoolItem
     {
-        private HealthBar _prefab;
+        private T _prefab;
         private Transform _transform;
 
-        public void Initialise(HealthBar healthBar, Transform defaultParent = null)
+        public void Initialise(T healthBar, Transform defaultParent = null)
         {
             _prefab = healthBar;
             _transform = defaultParent;
         }
         
-        protected override HealthBar CreateItem()
+        protected override T CreateItem()
         {
             return Object.Instantiate(_prefab, _transform);
         }
-        
-        
     }
 }

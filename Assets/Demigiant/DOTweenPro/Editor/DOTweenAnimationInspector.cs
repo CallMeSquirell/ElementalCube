@@ -660,7 +660,7 @@ namespace DG.DOTweenEditor
                 _src.endValueTransform = EditorGUILayout.ObjectField(_src.endValueTransform, typeof(Transform), true) as Transform;
                 if (_src.endValueTransform != prevT && _src.endValueTransform != null) {
 #if true // UI_MARKER
-                    // Check that it's a Transform for a Transform or a RectTransform for a RectTransform
+                    // Check that it's a SelfTransform for a SelfTransform or a RectTransform for a RectTransform
                     if (targetGO.GetComponent<RectTransform>() != null) {
                         if (_src.endValueTransform.GetComponent<RectTransform>() == null) {
                             EditorUtility.DisplayDialog("DOTween Pro", "For Unity UI elements, the target must also be a UI element", "Ok");

@@ -21,9 +21,9 @@ namespace DG.Tweening
 
         #region Shortcuts
 
-        #region Transform
+        #region SelfTransform
 
-        /// <summary>Tweens a Transform's localPosition in a spiral shape.
+        /// <summary>Tweens a SelfTransform's localPosition in a spiral shape.
         /// Also stores the transform as the tween's target so it can be used for filtered operations</summary>
         /// <param name="duration">The duration of the tween</param>
         /// <param name="axis">The axis around which the spiral will rotate</param>

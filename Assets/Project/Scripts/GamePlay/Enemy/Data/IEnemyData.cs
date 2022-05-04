@@ -3,6 +3,7 @@ using Framework.BindableProperties;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Enemy.Data.Stats;
 using Project.Scripts.GamePlay.Health.Data;
+using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Enemy.Data
 {
@@ -12,5 +13,6 @@ namespace Project.Scripts.GamePlay.Enemy.Data
         IBindableProperty<Element> CurrentElement { get; }
         IHealthData HealthData { get; }
         IEnemyInfo Stats { get; }
+        Transform Transform { get; }
     }
 }

@@ -10,12 +10,12 @@ namespace Framework.UI.Utils.Lable
     {
         [SerializeField] private Vector3 _offset = new Vector3(0,5, 0);
         private Transform _target;
-        private RectTransform _transform;
         private Camera _camera;
+        protected RectTransform SelfTransform { get; private set; }
 
         private void Awake()
         {
-            _transform = GetComponent<RectTransform>();
+            SelfTransform = GetComponent<RectTransform>();
             _camera = Camera.main;
         }
 
@@ -28,7 +28,7 @@ namespace Framework.UI.Utils.Lable
         {
             if (_target.NonNull())
             {
-                _transform.position = _camera.WorldToScreenPoint(_target.position) + _offset;
+                SelfTransform.position = _camera.WorldToScreenPoint(_target.position) + _offset;
             }
         }
     }

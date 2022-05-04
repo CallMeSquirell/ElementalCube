@@ -16,6 +16,7 @@ namespace Framework.ResourceManagement
         private const string CubePath = "Assets/Project/Configs/CubeConfig.asset";        
         private const string EnemyPath = "Assets/Project/Configs/EnemyConfig.asset";        
         private const string LevelPath = "Assets/Bundles/GamePlay/LevelConfig.asset";
+        private const string ElementPath = "Assets/Bundles/GamePlay/LevelConfig.asset";
         
         private readonly IAssetManager _assetManager;
         private PromiseActionQueue _queue;
@@ -30,6 +31,7 @@ namespace Framework.ResourceManagement
             _queue = new PromiseActionQueue(true);
             LoadConfig<CubeConfig>(CubePath);
             LoadConfig<LevelConfig>(LevelPath);
+            LoadConfig<ElementConfig>(ElementPath);
             //queue.Append(LoadConfig<EnemyConfig>(EnemyPath));
             return _queue;
         }

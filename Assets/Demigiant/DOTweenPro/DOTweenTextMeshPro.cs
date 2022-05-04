@@ -91,7 +91,7 @@ namespace DG.Tweening
         /// <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
         public static TweenerCore<Vector3, Vector3, VectorOptions> DOScale(this TMP_Text target, float endValue, float duration)
         {
-            Transform trans = target.transform;
+            SelfTransform trans = target.transform;
             Vector3 endValueV3 = new Vector3(endValue, endValue, endValue);
             TweenerCore<Vector3, Vector3, VectorOptions> t = DOTween.To(() => trans.localScale, x => trans.localScale = x, endValueV3, duration);
             t.SetTarget(target);

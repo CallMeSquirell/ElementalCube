@@ -205,21 +205,21 @@ namespace DG.Tweening
 #if true // UI_MARKER
                     tween = ((RectTransform)target).DOAnchorPos3D(endValueV3, duration, optionalBool0);
 #else
-                    tween = ((Transform)target).DOMove(endValueV3, duration, optionalBool0);
+                    tween = ((SelfTransform)target).DOMove(endValueV3, duration, optionalBool0);
 #endif
                     break;
                 case TargetType.Rigidbody:
 #if true // PHYSICS_MARKER
                     tween = ((Rigidbody)target).DOMove(endValueV3, duration, optionalBool0);
 #else
-                    tween = ((Transform)target).DOMove(endValueV3, duration, optionalBool0);
+                    tween = ((SelfTransform)target).DOMove(endValueV3, duration, optionalBool0);
 #endif
                     break;
                 case TargetType.Rigidbody2D:
 #if true // PHYSICS2D_MARKER
                     tween = ((Rigidbody2D)target).DOMove(endValueV3, duration, optionalBool0);
 #else
-                    tween = ((Transform)target).DOMove(endValueV3, duration, optionalBool0);
+                    tween = ((SelfTransform)target).DOMove(endValueV3, duration, optionalBool0);
 #endif
                     break;
                 }
@@ -236,14 +236,14 @@ namespace DG.Tweening
 #if true // PHYSICS_MARKER
                     tween = ((Rigidbody)target).DORotate(endValueV3, duration, optionalRotationMode);
 #else
-                    tween = ((Transform)target).DORotate(endValueV3, duration, optionalRotationMode);
+                    tween = ((SelfTransform)target).DORotate(endValueV3, duration, optionalRotationMode);
 #endif
                     break;
                 case TargetType.Rigidbody2D:
 #if true // PHYSICS2D_MARKER
                     tween = ((Rigidbody2D)target).DORotate(endValueFloat, duration);
 #else
-                    tween = ((Transform)target).DORotate(endValueV3, duration, optionalRotationMode);
+                    tween = ((SelfTransform)target).DORotate(endValueV3, duration, optionalRotationMode);
 #endif
                     break;
                 }
@@ -646,13 +646,13 @@ namespace DG.Tweening
             if (dotIndex != -1) str = str.Substring(dotIndex + 1);
             if (str.IndexOf("Renderer") != -1 && (str != "SpriteRenderer")) str = "Renderer";
 //#if true // PHYSICS_MARKER
-//            if (str == "Rigidbody") str = "Transform";
+//            if (str == "Rigidbody") str = "SelfTransform";
 //#endif
 //#if true // PHYSICS2D_MARKER
-//            if (str == "Rigidbody2D") str = "Transform";
+//            if (str == "Rigidbody2D") str = "SelfTransform";
 //#endif
 #if true // UI_MARKER
-//            if (str == "RectTransform") str = "Transform";
+//            if (str == "RectTransform") str = "SelfTransform";
             if (str == "RawImage") str = "Image"; // RawImages are managed like Images for DOTweenAnimation (color and fade use Graphic target anyway)
 #endif
             return (TargetType)Enum.Parse(typeof(TargetType), str);

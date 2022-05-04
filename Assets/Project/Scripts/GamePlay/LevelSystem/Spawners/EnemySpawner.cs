@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using Framework.ResourceManagement;
 using Project.Scripts.Framework.ResourceManagement.Game.GameScreen.Models;
 using Project.Scripts.GamePlay.Enemy.Configs;
 using Project.Scripts.GamePlay.Enemy.Data;
-using Project.Scripts.GamePlay.Enemy.Views;
+using Project.Scripts.GamePlay.Enemy.Data.Stats;
 using UnityEngine;
 using Zenject;
 
@@ -14,29 +12,22 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
     {
         [SerializeField] private EnemySpawnerData _enemySpawnerData;
         [SerializeField] private Transform _spawnPoint;
-        
+
         private int _currentSpawnIndex;
         private Coroutine _spawnCoroutine;
         private EnemyConfig _enemyConfig;
         private IEnemyModel _enemyModel;
-        private IConfig _config;
-        private IInstantiator _instantiator;
-        
+        private IEnemyFactory _enemyFactory;
+     
         private IEnemySpawnerData Data => _enemySpawnerData;
 
         [Inject]
-        public void Construct(IInstantiator instantiator, IConfig config, IEnemyModel enemyModel)
+        public void Construct( IEnemyModel enemyModel, IEnemyFactory enemyFactory)
         {
+            _enemyFactory = enemyFactory;
             _enemyModel = enemyModel;
-            _instantiator = instantiator;
-            _config = config;
         }
         
-        private void Awake()
-        {
-            _enemyConfig = _config.Get<EnemyConfig>();
-        }
-
         public void Play()
         {
             Stop();
@@ -73,9 +64,10 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
             }
         }
 
-        private void Spawn(IEnemyData data)
+        private void Spawn(IEnemyInfo info)
         {
-            var enemy = _instantiator.InstantiatePrefabForComponent<EnemyView>(_enemyConfig.Definition, _spawnPoint);
+            var enemy = _enemyFactory.Create(_spawnPoint);
+            var data = new EnemyData(info, enemy.transform);
             enemy.SetData(data);
             enemy.Attack(Data.Target);
             data.Died += OnEnemyDied;

@@ -73,6 +73,7 @@
      <Compile Include="Assets\Framework\BindableProperties\IBindableProperty.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\CoroutineManager.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\ICoroutineManager.cs" />
+     <Compile Include="Assets\Framework\Extensions\ColorExtenstion.cs" />
      <Compile Include="Assets\Framework\Extensions\EnumComparator.cs" />
      <Compile Include="Assets\Framework\Extensions\LinQExtensions.cs" />
      <Compile Include="Assets\Framework\Extensions\ObjectExtensions.cs" />
@@ -125,8 +126,9 @@
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutList.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListItem.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListPool.cs" />
+     <Compile Include="Assets\Project\Scripts\Configs\ElementConfig.cs" />
+     <Compile Include="Assets\Project\Scripts\Configs\LevelConfig.cs" />
      <Compile Include="Assets\Project\Scripts\Constants\SceneNames.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Configs\LevelConfig.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\CoreInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\GameSceneInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\GlobalInstaller.cs" />
@@ -172,6 +174,7 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Pool\IHitPool.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\IAttackTarget.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Level.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemyFactory.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemySpawner.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemySpawnerData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\IEnemySpawnerData.cs" />
@@ -185,11 +188,13 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\ITileData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\EnemyHealthBarContainer.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\GameScreenPresenter.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\GameScreenView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBarPool.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\DefaultMonoBehaviourPool.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\EnemyHealthBarContainer.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\FloatingText.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\HealthBar.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\HitTextContainer.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\Models\EnemyModel.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\Models\IEnemyModel.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Models\IInputStrategyProvider.cs" />

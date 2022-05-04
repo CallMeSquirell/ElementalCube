@@ -22,19 +22,13 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
         private List<EnemyInfo> _enemies;
         
         [SerializeField] private TownHall _townHall;
-
-        private IReadOnlyList<IEnemyData> _enemyDataList;
-
+        
         public float StartSpawnDelay => _startDelay;
 
         public float SpawnDeltaTime => _spawnDelay;
 
         public IAttackTarget Target => _townHall;
-        public IReadOnlyList<IEnemyData> SlimeList => _enemyDataList ?? (_enemyDataList = CreateEnemyData());
+        public IReadOnlyList<IEnemyInfo> SlimeList => _enemies;
         
-        private IReadOnlyList<IEnemyData> CreateEnemyData()
-        {
-            return _enemies.Select(info => new EnemyData(info)).ToList();
-        }
     }
 }

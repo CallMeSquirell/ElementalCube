@@ -6,6 +6,7 @@ using Project.Scripts.GameControl.Models;
 using Project.Scripts.GamePlay.Cube.Data.Elements;
 using Project.Scripts.GamePlay.Cube.Data.Factory;
 using Project.Scripts.GamePlay.Health.Hits.Pool;
+using Project.Scripts.GamePlay.LevelSystem.Spawners;
 using Project.Scripts.GamePlay.Models;
 using Project.Scripts.UI.PlaceTile.Views;
 
@@ -26,6 +27,7 @@ namespace Project.Scripts.GamePlay
         protected override void InstallCommon()
         {
             Container.Bind<ICubeDataFactory>().To<CubeDataFactory>().AsSingle();
+            Container.Bind<IEnemyFactory>().To<EnemyFactory>().AsSingle();
             Container.Bind<IElementProvider>().To<ElementProvider>().AsSingle();
             Container.Bind<IHitPool>().To<HitPool>().AsSingle();
         }
