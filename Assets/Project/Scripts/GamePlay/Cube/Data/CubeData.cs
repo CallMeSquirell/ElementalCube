@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Project.Scripts.Framework.BindableProperties;
+using Framework.BindableProperties;
 using Project.Scripts.GamePlay.Cube.Data.Face;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Cube.Data.State;
@@ -10,20 +10,19 @@ namespace Project.Scripts.GamePlay.Cube.Data
 {
     public class CubeData : ICubeData
     {
-        private readonly BindableProperty<IFaceBonusData> _currentFace;
+        private readonly BindableProperty<FaceType> _currentFace;
         public ICubeInfo Stats { get; }
         
         public CubeState State { get; } =  new CubeState();
-        public IReadOnlyList<IFaceBonusData> Faces { get; }
-        
-        public IBindableProperty<IFaceBonusData> CurrentFace => _currentFace;
-        private IFaceBonusData RandomFace => Faces[Random.Range(0, Faces.Count)];
+        public IReadOnlyList<FaceType> Faces { get; }
+        public IBindableProperty<FaceType> CurrentFace => _currentFace;
+        private FaceType RandomFace => Faces[Random.Range(0, Faces.Count)];
 
-        public CubeData(IReadOnlyList<IFaceBonusData> faces, ICubeInfo stats)
+        public CubeData(IReadOnlyList<FaceType> faces, ICubeInfo stats)
         {
             Faces = faces;
             Stats = stats;
-            _currentFace = new BindableProperty<IFaceBonusData>(RandomFace);
+            _currentFace = new BindableProperty<FaceType>(RandomFace);
         }
 
         public void Reroll()

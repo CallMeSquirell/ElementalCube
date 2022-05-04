@@ -1,6 +1,6 @@
-using Project.Scripts.Framework.MVP;
-using Project.Scripts.Framework.MVVM;
+using Framework.MVVM;
 using Project.Scripts.GamePlay.Cube.Data;
+using Project.Scripts.GamePlay.Cube.Data.Faces;
 using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Cube.Views
@@ -9,15 +9,23 @@ namespace Project.Scripts.GamePlay.Cube.Views
     {
         [SerializeField] private CubeShooterView _cubeShooterView;
 
+        private FaceStateMachine _faceStateMachine;
+        
         protected override void Initialize()
         {
-            _cubeShooterView.SetData(Data.Stats.Damage, Data.Stats.ShotsPerSecond);
-            Data.CurrentFace.BindAndInvoke(_cubeShooterView.SetFaceBonus);
+            _cubeShooterView.SetData(Data.Stats);
+            _faceStateMachine = Instantiator.Instantiate<FaceStateMachine>(new object[] {Data.Stats});
+            Data.CurrentFace.BindAndInvoke(OnFaceChanged);
         }
 
+        private void OnFaceChanged(FaceType type)
+        {
+            _cubeShooterView.SetFaceBonus(_faceStateMachine.UpdateFace(type));
+        }
+        
         protected override void UnBind()
         {
-            Data.CurrentFace.UnBind(_cubeShooterView.SetFaceBonus);
+            Data.CurrentFace.UnBind(OnFaceChanged);
         }
     }
 }

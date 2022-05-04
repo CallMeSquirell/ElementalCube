@@ -1,6 +1,6 @@
-using Project.Scripts.Framework.MVP.Installers;
-using Project.Scripts.Framework.ResourceManagement;
-using Project.Scripts.GamePlay.Cube.Installer;
+using Framework.UI.MVP.Installers;
+using Project.Scripts.GamePlay;
+using Project.Scripts.UI.PlaceTile;
 using Zenject;
 
 namespace Project.Scripts.GameControl.Installers
@@ -15,9 +15,8 @@ namespace Project.Scripts.GameControl.Installers
         private void InstallNestedInstallers()
         {
             Container.Install<ViewManagementInstaller>();
-            Container.Install<ResourceManagementInstaller>();
             Container.Install<CoreInstaller>();
-            Container.Install<CubeInstaller>();
+            Container.Install<GamePlayInstaller>();
         }
     }
 }

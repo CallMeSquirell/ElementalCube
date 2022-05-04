@@ -25,7 +25,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_23;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;PLATFORM_IOS;ENABLE_RUNTIME_GI;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_IPHONE_API;SUPPORT_MULTIPLE_DISPLAYS;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_23;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -58,43 +58,74 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+     <Compile Include="Assets\Framework\BindableProperties\BindableProperty.cs" />
+     <Compile Include="Assets\Framework\BindableProperties\IBindableProperty.cs" />
+     <Compile Include="Assets\Framework\CoroutineManager\CoroutineManager.cs" />
+     <Compile Include="Assets\Framework\CoroutineManager\ICoroutineManager.cs" />
+     <Compile Include="Assets\Framework\Extensions\EnumComparator.cs" />
+     <Compile Include="Assets\Framework\Extensions\LinQExtensions.cs" />
+     <Compile Include="Assets\Framework\Extensions\ObjectExtensions.cs" />
+     <Compile Include="Assets\Framework\Extensions\VectorExtensions.cs" />
+     <Compile Include="Assets\Framework\MVVM\BaseView.cs" />
+     <Compile Include="Assets\Framework\Pool\AbstractPool.cs" />
+     <Compile Include="Assets\Framework\Pool\IPool.cs" />
+     <Compile Include="Assets\Framework\Pool\IPoolItem.cs" />
+     <Compile Include="Assets\Framework\Pool\ObjectPoolItem.cs" />
+     <Compile Include="Assets\Framework\Pool\PoolItem.cs" />
+     <Compile Include="Assets\Framework\Promises\Extensions\PromiseExtenstion.cs" />
+     <Compile Include="Assets\Framework\Promises\IPromise.cs" />
+     <Compile Include="Assets\Framework\Promises\Promise.cs" />
+     <Compile Include="Assets\Framework\Promises\PromiseAction.cs" />
+     <Compile Include="Assets\Framework\Promises\PromiseActionQueue.cs" />
+     <Compile Include="Assets\Framework\ResourceManagement\AssetManager.cs" />
+     <Compile Include="Assets\Framework\ResourceManagement\Config.cs" />
+     <Compile Include="Assets\Framework\ResourceManagement\IAssetManager.cs" />
+     <Compile Include="Assets\Framework\Singleton\Singleton.cs" />
+     <Compile Include="Assets\Framework\UI\Animations\BaseTransition.cs" />
+     <Compile Include="Assets\Framework\UI\Animations\DefaultTransition.cs" />
+     <Compile Include="Assets\Framework\UI\Installers\UIInstaller.cs" />
+     <Compile Include="Assets\Framework\UI\Layer\WindowLayer.cs" />
+     <Compile Include="Assets\Framework\UI\Layer\WindowLayerEnum.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\Binding\IPresenterBinding.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\Binding\IPresenterContainer.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\Binding\PresenterBinding.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\Binding\PresenterContainer.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\IViewFactory.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\Provider\IPresenterProvider.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\Provider\PresenterProvider.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\DI\ViewFactory.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Installers\MVPInstaller.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Installers\ViewManagementInstaller.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Core\IPresenter.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Core\IScreenBaseView.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Core\Presenter.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Core\ScreenBaseView.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Data\IViewData.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Data\IViewDefinition.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Data\ViewData.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Data\ViewDefinition.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\PopUp\IPopUpView.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\PopUp\PopUpView.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\ViewListeners\IViewListener.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\ViewListeners\ViewListener.cs" />
+     <Compile Include="Assets\Framework\UI\Manager\IUIManager.cs" />
+     <Compile Include="Assets\Framework\UI\Manager\UIManager.cs" />
+     <Compile Include="Assets\Framework\UI\Utils\Lable\LeadingLabele.cs" />
+     <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutList.cs" />
+     <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListItem.cs" />
+     <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListPool.cs" />
      <Compile Include="Assets\Project\Scripts\Constants\SceneNames.cs" />
-     <Compile Include="Assets\Project\Scripts\Extenstions\FaceTypeConverter.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\BindableProperties\BindableProperty.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\BindableProperties\IBindableProperty.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Extensions\EnumComparator.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Extensions\LinQExtensions.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Extensions\ObjectExtensions.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Extensions\VectorExtensions.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Factory\BaseMonoBehaviourFactory.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Factory\IFactory.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\BaseView.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\Binding\IPresenterBinding.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\Binding\IPresenterContainer.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\Binding\PresenterBinding.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\Binding\PresenterContainer.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\IViewFactory.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\Provider\IPresenterProvider.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\Provider\PresenterProvider.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\DI\ViewFactory.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\Installers\MVPInstaller.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\Installers\ViewManagementInstaller.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\UI\Views\IPresenter.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\UI\Views\IWindowView.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\UI\Views\Presenter.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\UI\Views\ViewDefinition.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\UI\Views\WindowWindowView.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\MVP\UI\WindowLayerEnum.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Manager\CoroutineManager.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Manager\ICoroutineManager.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Pool\AbstractPool.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Pool\IPool.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Pool\IPoolItem.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Pool\PoolItem.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Promises\IPromise.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\Promises\Promise.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\ResourceManagement\Config.cs" />
-     <Compile Include="Assets\Project\Scripts\Framework\ResourceManagement\ResourceManagementInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Configs\LevelConfig.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\CoreInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Installers\GameSceneInstaller.cs" />
@@ -104,25 +135,26 @@
      <Compile Include="Assets\Project\Scripts\GameControl\Loader\LevelLoader.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Models\CubeSetModel.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Models\ICubeSetModel.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Models\IPlaceModel.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Models\PlaceModel.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Starter.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Configs\CubeConfig.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\CubeData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Element\ElementData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Element\IElementData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\BaseFace.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\ElectroElement.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\ElementProvider.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\IElement.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\IElementProvider.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\KrioElement.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\PiroElement.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\Extenstions\FaceTypeProvider.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\FaceStateMachine.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\FaceType.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\IFaceBonusData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\Provider\FaceDataProvider.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\Provider\IFaceDataProvider.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Faces\Impl\ElementalFace.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Factory\CubeDataFactory.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Factory\ICubeDataFactory.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\ICubeData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\State\CubeState.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\CubeInfo.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\ICubeInfo.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Installer\CubeInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\CubeShooterView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\CubeView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Configs\EnemyConfig.cs" />
@@ -130,8 +162,8 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\IEnemyData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\Stats\EnemyInfo.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\Stats\IEnemyInfo.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Installer\EnemyInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Views\EnemyView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\GamePlayInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Data\HealthData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Data\IHealthData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Hit.cs" />
@@ -146,16 +178,32 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\ITownHallData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\TownHall.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\TownHallData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\GameModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\IGameModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\IPlacedCubeModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\PlacedCubesModel.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\ITileData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\EnemyHealthBarContainer.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\GameScreenPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\GameScreenView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBarPool.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\Models\EnemyModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\Models\IEnemyModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Models\IInputStrategyProvider.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Models\InputStrategyProvider.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Processorors\IInputProcessor.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Processorors\Impl\TileInputProcessor.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\System\ITouchable.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\System\InputSystem.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\CubeSelectReferenceView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\PlaceTileLayoutList.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\PlaceTilePopUpPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\PlaceTilePopUpView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\RegisteredViews.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Watcher\InRangeWatcher.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Models\IInputData.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Models\InputData.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Processorors\IInputProcessor.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\Processorors\Impl\TileInputProcessor.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\System\ITouchable.cs" />
-     <Compile Include="Assets\Project\Scripts\Input\System\InputSystem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -170,8 +218,11 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -245,6 +296,12 @@
  </Reference>
  <Reference Include="UnityEngine.ClothModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -395,6 +452,15 @@
  </Reference>
  <Reference Include="Zenject-usage">
  <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiLib">
+ <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/admin/RiderProjects/Diplom/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.23f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

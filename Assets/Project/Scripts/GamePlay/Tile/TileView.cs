@@ -1,5 +1,6 @@
-using Project.Scripts.Framework.MVP;
-using Project.Scripts.Framework.MVVM;
+using Framework.Extensions;
+using Framework.MVVM;
+using Framework.ResourceManagement;
 using Project.Scripts.Framework.ResourceManagement;
 using Project.Scripts.GamePlay.Cube.Configs;
 using Project.Scripts.GamePlay.Cube.Data;
@@ -19,6 +20,7 @@ namespace Project.Scripts.GamePlay.Tile
         private void Awake()
         {
             _cubeConfig = Config.Get<CubeConfig>();
+            SetData(new TileData(null));
         }
 
         protected override void Initialize()
@@ -28,6 +30,7 @@ namespace Project.Scripts.GamePlay.Tile
         
         private void OnSelectedCubeUpdated(ICubeData cubeData)
         {
+            Clear();
             if (cubeData != null)
             {
                 _cubeView = Instantiator.InstantiatePrefabForComponent<CubeView>(_cubeConfig.CubeView,
@@ -35,7 +38,16 @@ namespace Project.Scripts.GamePlay.Tile
                 _cubeView.SetData(cubeData);
             }
         }
-        
+
+        private void Clear()
+        {
+            if (_cubeView.NonNull())
+            {
+                Destroy(_cubeView.gameObject);
+                _cubeView = null;
+            }
+        }
+
         protected override void UnBind()
         {
             Data.PlacedCube.UnBind(OnSelectedCubeUpdated);

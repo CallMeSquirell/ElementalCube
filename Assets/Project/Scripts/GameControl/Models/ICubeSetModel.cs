@@ -6,7 +6,9 @@ namespace Project.Scripts.GameControl.Models
 {
     public interface ICubeSetModel
     {
-        IReadOnlyList<CubeInfo> CurrentCubeSet { get; }
+        IReadOnlyList<ICubeInfo> CurrentCubeSet { get; }
+        IReadOnlyList<ICubeInfo> AvailableCubeData { get; }
         void RefreshAvailableCubeDataList();
+        void Retain(ICubeInfo data);
     }
 }

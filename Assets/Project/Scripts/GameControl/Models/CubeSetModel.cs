@@ -1,17 +1,19 @@
 using System.Collections.Generic;
-using Project.Scripts.Framework.ResourceManagement;
+using Framework.ResourceManagement;
 using Project.Scripts.GamePlay.Cube.Configs;
-using Project.Scripts.GamePlay.Cube.Data;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
+using Zenject;
 
 namespace Project.Scripts.GameControl.Models
 {
     public class CubeSetModel : ICubeSetModel
     {
-        private IReadOnlyList<CubeInfo> _currentCubeSet;
-        public List<CubeInfo> AvailableCubeData { private set; get; }
+        private IReadOnlyList<ICubeInfo> _currentCubeSet;
+        public IReadOnlyList<ICubeInfo> AvailableCubeData => _availableCubeData;
 
-        public IReadOnlyList<CubeInfo> CurrentCubeSet
+        private List<ICubeInfo> _availableCubeData;
+
+        public IReadOnlyList<ICubeInfo> CurrentCubeSet
         {
             get => _currentCubeSet;
             private set
@@ -21,14 +23,19 @@ namespace Project.Scripts.GameControl.Models
             }
         }
 
-        public CubeSetModel()
+        public CubeSetModel(IConfig config)
         {
-            CurrentCubeSet = Config.Get<CubeConfig>().CubeSet;
+            CurrentCubeSet = config.Get<CubeConfig>().CubeSet;
+        }
+
+        public void Retain(ICubeInfo cubeInfo)
+        {
+            _availableCubeData.Remove(cubeInfo);
         }
 
         public void RefreshAvailableCubeDataList()
         {
-            AvailableCubeData = new List<CubeInfo>(CurrentCubeSet);
+            _availableCubeData = new List<ICubeInfo>(CurrentCubeSet);
         }
     }
 }

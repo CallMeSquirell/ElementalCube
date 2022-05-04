@@ -14,7 +14,7 @@ namespace Project.Scripts.GamePlay.LevelSystem.TownHalls
         public IHealthData HealthData => Data.HealthData;
 
         public ITownHallData Data => _data;
-
+        
         private void Awake()
         {
             _transform = transform;

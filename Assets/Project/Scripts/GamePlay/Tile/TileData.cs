@@ -1,4 +1,4 @@
-using Project.Scripts.Framework.BindableProperties;
+using Framework.BindableProperties;
 using Project.Scripts.GamePlay.Cube.Data;
 
 namespace Project.Scripts.GamePlay.Tile

@@ -1,5 +1,6 @@
-using Project.Scripts.Framework.Pool;
-using Project.Scripts.GamePlay.Cube.Data.Element;
+using Framework.Pool;
+using Project.Scripts.GamePlay.Cube.Data.Elements;
+using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Zenject;
 
 namespace Project.Scripts.GamePlay.Health.Hits.Pool
@@ -13,7 +14,7 @@ namespace Project.Scripts.GamePlay.Health.Hits.Pool
             _instantiator = instantiator;
         }
         
-        public IHit Get(int damage, IElementData element)
+        public IHit Get(int damage, Element element)
         {
             var hit = base.Get();
             hit.Damage = damage;

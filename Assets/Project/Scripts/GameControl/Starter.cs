@@ -1,13 +1,23 @@
 using System.Collections;
 using Project.Scripts.Constants;
+using Project.Scripts.GameControl.Loader;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Zenject;
 
 namespace Project.Scripts.GameControl
 {
     public class Starter : MonoBehaviour
     {
-        private void Awake()
+        private ILevelLoader _loader;
+        
+        [Inject]
+        private void Construct(ILevelLoader loader)
+        {
+            _loader = loader;
+        }
+            
+        public void Initialize()
         {
             StartCoroutine(LoadLevel());
         }
@@ -16,7 +26,7 @@ namespace Project.Scripts.GameControl
         {
             DontDestroyOnLoad(gameObject);
             yield return SceneManager.LoadSceneAsync(SceneNames.GameScene);
-            Destroy(gameObject);
+            _loader.Load().Then(() => Destroy(gameObject));
         }
     }
 }

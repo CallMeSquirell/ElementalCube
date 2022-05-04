@@ -1,6 +1,7 @@
 using System.Collections;
-using Project.Scripts.Framework.Extensions;
+using Framework.Extensions;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
+using Project.Scripts.GamePlay.Cube.Data.Stats;
 using Project.Scripts.GamePlay.Enemy.Views;
 using Project.Scripts.GamePlay.Health.Hits;
 using Project.Scripts.GamePlay.Health.Hits.Pool;
@@ -23,9 +24,8 @@ namespace Project.Scripts.GamePlay.Cube.Views
         private InRangeWatcher<EnemyView> _slimeWatcher = new InRangeWatcher<EnemyView>();
         
         private IHitPool HitPool => _hitPool;
-
-        private int ShotPerSecond { get; set; }
-        private int Damage { get; set; }
+        
+        private ICubeInfo CubeInfo { get; set; }
 
         [Inject]
         public void Initialize(IHitPool hitPool)
@@ -39,10 +39,9 @@ namespace Project.Scripts.GamePlay.Cube.Views
             _slimeWatcher.Left += OnEnemyLeft;
         }
 
-        public void SetData(int damage, int shotPerSecond)
+        public void SetData(ICubeInfo cubeInfo)
         {
-            Damage = damage;
-            ShotPerSecond = shotPerSecond;
+            CubeInfo = cubeInfo;
         }
 
         public void SetFaceBonus(IFaceBonusData element)
@@ -110,11 +109,11 @@ namespace Project.Scripts.GamePlay.Cube.Views
 
         private IEnumerator ShootingCoroutine()
         {
-            var waiter = new WaitForSeconds(1f / ShotPerSecond);
+            var waiter = new WaitForSeconds(1f / CubeInfo.ShotsPerSecond);
             while (true)
             {
                 yield return waiter;
-                _currentAim.Data.HealthData.AddHit(HitPool.Get(Damage), true);
+                _faceBonusData.Process(_currentAim.Data, CubeInfo);
             }
         }
         

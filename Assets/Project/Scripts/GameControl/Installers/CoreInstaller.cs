@@ -1,7 +1,8 @@
-using Project.Scripts.Framework.MVP.DI.Binding;
-using Project.Scripts.Framework.MVP.Installers;
+using Framework.ResourceManagement;
+using Framework.UI.MVP.DI.Binding;
+using Framework.UI.MVP.Installers;
+using Project.Scripts.GameControl.Loader;
 using Project.Scripts.GameControl.Models;
-using Project.Scripts.Input.Models;
 
 namespace Project.Scripts.GameControl.Installers
 {
@@ -12,11 +13,16 @@ namespace Project.Scripts.GameControl.Installers
            
         }
 
+        protected override void InstallCommon()
+        {
+            Container.Bind<IAssetManager>().To<AssetManager>().AsSingle();
+            Container.Bind<IConfig>().To<Config>().AsSingle();
+            Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
+        }
+
         protected override void InstallModels()
         {
-            Container.Bind<ICubeSetModel>().To<CubeSetModel>().AsSingle();
-            Container.Bind<IInputData>().To<InputData>().AsSingle();
-            Container.Bind<IPlaceModel>().To<PlaceModel>().AsSingle();
+            
         }
     }
 }

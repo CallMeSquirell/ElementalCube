@@ -20,6 +20,6 @@ namespace Project.Scripts.GamePlay.Cube.Data.Stats
         public int ShotsPerSecond => _shotsPerSecond;
         public float ShootRange => _shootRange;
         
-        public IReadOnlyList<Type> Faces => _faces.ConvertToType().ToList();
+        public IReadOnlyList<FaceType> Faces => _faces;
     }
 }

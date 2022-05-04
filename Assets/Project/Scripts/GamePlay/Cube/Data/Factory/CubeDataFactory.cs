@@ -1,20 +1,12 @@
-using Project.Scripts.GamePlay.Cube.Data.Faces.Provider;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
 
 namespace Project.Scripts.GamePlay.Cube.Data.Factory
 {
     public class CubeDataFactory : ICubeDataFactory
     {
-        private readonly IFaceDataProvider _faceDataProvider;
-
-        public CubeDataFactory(IFaceDataProvider faceDataProvider)
+        public ICubeData Create(ICubeInfo cubeInfo)
         {
-            _faceDataProvider = faceDataProvider;
-        }
-
-        public ICubeData Create(CubeInfo cubeInfo)
-        {
-            return new CubeData(_faceDataProvider.Provide(cubeInfo.Faces),
+            return new CubeData(cubeInfo.Faces,
                 cubeInfo);
         }
     }

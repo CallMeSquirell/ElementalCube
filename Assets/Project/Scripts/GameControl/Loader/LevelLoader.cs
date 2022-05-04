@@ -1,32 +1,34 @@
-using Project.Scripts.Framework.MVP.DI.Provider;
-using Project.Scripts.Framework.MVP.Views;
+using Framework.Promises;
+using Framework.ResourceManagement;
+using Framework.UI.Manager;
 using Project.Scripts.Framework.ResourceManagement;
 using Project.Scripts.GamePlay.LevelSystem;
-using UnityEngine;
 using Zenject;
 
 namespace Project.Scripts.GameControl.Loader
 {
-    public class LevelLoader : MonoBehaviour
+    public class LevelLoader : ILevelLoader
     {
-        private IInstantiator _instantiator;
-        private IPresenterProvider _provider;
-        private Level _currentLevel;
-        
-        [Inject]
-        private void Construct(IInstantiator instantiator, IPresenterProvider provider)
+        private readonly IInstantiator _instantiator;
+        private readonly Level _currentLevel;
+        private readonly IConfig _assetManager;
+        private readonly IUIManager _uiManager;
+
+        public LevelLoader(IInstantiator instantiator, IConfig assetManager, IUIManager uiManager)
         {
             _instantiator = instantiator;
-            _provider = provider;
+            _assetManager = assetManager;
+            _uiManager = uiManager;
         }
 
-        private void Awake()
+        public IPromise Load()
         {
-            var level = _instantiator.InstantiatePrefab(Config.Get<LevelConfig>().Level);
-            foreach (var view in  level.GetComponentsInChildren<ManagedView>())
+            return _assetManager.Load().Then(() =>
             {
-                _provider.ProvideIncludeSubViesTo(view);
-            }
+                var config = _assetManager.Get<LevelConfig>();
+                _instantiator.InstantiatePrefab(config.Level);
+                _uiManager.OpenView(RegisteredViews.GameScreen);
+            }); 
         }
     }
 }

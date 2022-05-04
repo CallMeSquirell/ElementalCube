@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Project.Scripts.GamePlay.Cube.Data.Face;
+using Project.Scripts.GamePlay.Cube.Data.Faces;
 
 namespace Project.Scripts.GamePlay.Cube.Data.Stats
 {
@@ -9,6 +11,6 @@ namespace Project.Scripts.GamePlay.Cube.Data.Stats
         int ShotsPerSecond { get; }
         float ShootRange { get; }
 
-        IReadOnlyList<Type> Faces { get; }
+        IReadOnlyList<FaceType> Faces { get; }
     }
 }

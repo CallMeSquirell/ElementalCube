@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Project.Scripts.Framework.MVP;
-using Project.Scripts.Framework.ResourceManagement;
+using Framework.ResourceManagement;
+using Project.Scripts.Framework.ResourceManagement.Game.GameScreen.Models;
 using Project.Scripts.GamePlay.Enemy.Configs;
 using Project.Scripts.GamePlay.Enemy.Data;
 using Project.Scripts.GamePlay.Enemy.Views;
@@ -17,22 +17,24 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
         
         private int _currentSpawnIndex;
         private Coroutine _spawnCoroutine;
-        private EnemyConfig _config;
+        private EnemyConfig _enemyConfig;
+        private IEnemyModel _enemyModel;
+        private IConfig _config;
         private IInstantiator _instantiator;
         
-        private readonly Dictionary<IEnemyData, EnemyView> _spawnedEnemies = new Dictionary<IEnemyData, EnemyView>();
-
         private IEnemySpawnerData Data => _enemySpawnerData;
 
         [Inject]
-        public void Construct(IInstantiator instantiator)
+        public void Construct(IInstantiator instantiator, IConfig config, IEnemyModel enemyModel)
         {
+            _enemyModel = enemyModel;
             _instantiator = instantiator;
+            _config = config;
         }
         
         private void Awake()
         {
-            _config = Config.Get<EnemyConfig>();
+            _enemyConfig = _config.Get<EnemyConfig>();
         }
 
         public void Play()
@@ -73,17 +75,17 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
 
         private void Spawn(IEnemyData data)
         {
-            var enemy = _instantiator.InstantiatePrefabForComponent<EnemyView>(_config.Definition, _spawnPoint);
+            var enemy = _instantiator.InstantiatePrefabForComponent<EnemyView>(_enemyConfig.Definition, _spawnPoint);
             enemy.SetData(data);
             enemy.Attack(Data.Target);
             data.Died += OnEnemyDied;
-            _spawnedEnemies.Add(data, enemy);
+            _enemyModel.Place(data);
         }
 
         private void OnEnemyDied(IEnemyData enemyData)
         {
             enemyData.Died -= OnEnemyDied;
-            _spawnedEnemies.Remove(enemyData);
+            _enemyModel.Remove(enemyData);
         }
     }
 }
