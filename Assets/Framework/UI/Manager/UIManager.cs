@@ -8,13 +8,13 @@ using UnityEngine;
 
 namespace Framework.UI.Manager
 {
-    public class UIManager : MonoBehaviour, IUIManager
+    public class UIManager : IUIManager
     {
         private readonly List<WindowLayer> _layers = new List<WindowLayer>();
 
-        private void Awake()
+        public void Initialise()
         {
-            _layers.AddRange(GetComponentsInChildren<WindowLayer>(true)
+            _layers.AddRange(Object.FindObjectsOfType<WindowLayer>()
                 .OrderBy(layer => layer.Order));
             _layers.ForEach(layer => layer.Cleared += OnLayerCleared);
         }

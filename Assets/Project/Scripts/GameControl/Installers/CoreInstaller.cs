@@ -1,8 +1,10 @@
 using Framework.ResourceManagement;
+using Framework.UI.Manager;
 using Framework.UI.MVP.DI.Binding;
 using Framework.UI.MVP.Installers;
 using Project.Scripts.GameControl.Loader;
 using Project.Scripts.GameControl.Models;
+using Project.Scripts.Input.Models;
 
 namespace Project.Scripts.GameControl.Installers
 {
@@ -15,6 +17,8 @@ namespace Project.Scripts.GameControl.Installers
 
         protected override void InstallCommon()
         {
+            Container.Bind<IUIManager>().To<UIManager>().AsSingle();
+            Container.Bind<IInputStrategyProvider>().To<InputStrategyProvider>().AsSingle();
             Container.Bind<IAssetManager>().To<AssetManager>().AsSingle();
             Container.Bind<IConfig>().To<Config>().AsSingle();
             Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();

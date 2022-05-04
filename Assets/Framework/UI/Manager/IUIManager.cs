@@ -8,5 +8,6 @@ namespace Framework.UI.Manager
     {
         IViewListener OpenView(IViewDefinition viewDefinition, object payload = null);
         IScreenBaseView GetView(IViewDefinition viewDefinition);
+        void Initialise();
     }
 }

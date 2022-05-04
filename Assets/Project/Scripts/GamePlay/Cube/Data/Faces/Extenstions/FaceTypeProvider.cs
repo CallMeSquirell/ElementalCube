@@ -10,8 +10,7 @@ namespace Project.Scripts.GamePlay.Cube.Data.Face
         {
             switch (type)
             {
-                case Bonus.Dot: return typeof(ElementalFace);
-                default: return null;
+                default: return typeof(ElementalFace);
             }
         }
     }

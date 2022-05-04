@@ -1,5 +1,6 @@
 using System;
 using Project.Scripts.GamePlay.Health.Hits;
+using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Health.Data
 {
@@ -10,6 +11,8 @@ namespace Project.Scripts.GamePlay.Health.Data
 
         public int CurrentHealthCount { get; private set; }
         public int MaxHealthCount { get; private set; }
+
+        public double HealthPercent => Math.Round(CurrentHealthCount * 1.0d / MaxHealthCount , 0);
 
         private IHit _lastHit;
 

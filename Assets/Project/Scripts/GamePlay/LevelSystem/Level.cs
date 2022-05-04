@@ -8,17 +8,10 @@ namespace Project.Scripts.GamePlay.LevelSystem
     public class Level : MonoBehaviour, IInitializable
     {
         [SerializeField] private EnemySpawner _enemySpawner;
-        [SerializeField] private TownHall _townHallData;
-
-        [Inject]
-        public void Construct()
-        {
-            
-        }
-
+        
         public void Initialize()
         {
-           
+           _enemySpawner.Play();
         }
     }
 }

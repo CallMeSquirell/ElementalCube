@@ -14,7 +14,7 @@ namespace Project.Scripts.GamePlay.Cube.Views
         protected override void Initialize()
         {
             _cubeShooterView.SetData(Data.Stats);
-            _faceStateMachine = Instantiator.Instantiate<FaceStateMachine>(new object[] {Data.Stats});
+            _faceStateMachine = Instantiator.Instantiate<FaceStateMachine>();
             Data.CurrentFace.BindAndInvoke(OnFaceChanged);
         }
 

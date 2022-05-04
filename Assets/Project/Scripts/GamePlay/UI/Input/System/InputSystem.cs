@@ -57,7 +57,7 @@ namespace Project.Scripts.Input
         
         private bool CheckAndSetUp(Vector2 position)
         {
-            if (Physics.Raycast(_camera.ScreenPointToRay(position), out var hit) &&
+            if (Physics.Raycast(_camera.ScreenPointToRay(position), out var hit, 150, LayerMask.NameToLayer("Input")) &&
                 hit.transform.TryGetComponent(out _currentSelected))
             {
                 return true;

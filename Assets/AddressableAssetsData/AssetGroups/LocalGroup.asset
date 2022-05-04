@@ -21,36 +21,50 @@ MonoBehaviour:
     m_Address: Assets/Bundles/CubeSelectReference.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 8938387303209717138, guid: 6a730936708534275a3c682510822b48,
-      type: 3}
-    m_TargetAsset: {fileID: 8938387303209717138, guid: 6a730936708534275a3c682510822b48,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 2d09000d62fbf4f48a55e0d027849c75
     m_Address: Assets/Bundles/GamePlay/LevelConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 11400000, guid: 2d09000d62fbf4f48a55e0d027849c75, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 2d09000d62fbf4f48a55e0d027849c75, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: e5675df38f02b4b02acd62ef042e147b
     m_Address: Assets/Bundles/View_PlaceCubePopUp.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 61898715313101554, guid: e5675df38f02b4b02acd62ef042e147b,
-      type: 3}
-    m_TargetAsset: {fileID: 61898715313101554, guid: e5675df38f02b4b02acd62ef042e147b,
-      type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: af398b4a48917481aa33189c767a6a9d
     m_Address: Assets/Project/Material/Tile.mat
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 2100000, guid: af398b4a48917481aa33189c767a6a9d, type: 2}
-    m_TargetAsset: {fileID: 2100000, guid: af398b4a48917481aa33189c767a6a9d, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 22711da5d90f24f78970b9b2a7546174
     m_Address: Assets/Project/Configs/CubeConfig.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 11400000, guid: 22711da5d90f24f78970b9b2a7546174, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: 22711da5d90f24f78970b9b2a7546174, type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ecb60bcec308e4d91a80ddc6d943f9d3
+    m_Address: Assets/Project/Configs/ElementConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c4db9cd930c1b4079815b2860cb64b9e
+    m_Address: Assets/Project/Prefabs/GameScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: caacc391d8d0445589c08f39f3a2993f
+    m_Address: Assets/Project/Configs/SlimeConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ac0adea4b0b754d5fac40f9f9db44c37, type: 2}
   m_SchemaSet:

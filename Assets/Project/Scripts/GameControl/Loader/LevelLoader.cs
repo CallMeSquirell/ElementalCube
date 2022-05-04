@@ -27,6 +27,7 @@ namespace Project.Scripts.GameControl.Loader
             {
                 var config = _assetManager.Get<LevelConfig>();
                 _instantiator.InstantiatePrefab(config.Level);
+                _uiManager.Initialise();
                 _uiManager.OpenView(RegisteredViews.GameScreen);
             }); 
         }

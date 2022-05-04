@@ -28,6 +28,7 @@ namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
         public void AddBar(IEnemyData enemy)
         {
             var healthBar = _defaultMonoBehaviourPool.Get();
+            healthBar.SetConfig(_elementConfig);
             healthBar.SetData(enemy, _damageContainer);
         }
     }

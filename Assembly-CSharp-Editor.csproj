@@ -61,6 +61,11 @@
      <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenPreviewManager.cs" />
      <Compile Include="Assets\Framework\Editor\StartUpStarter.cs" />
+     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
+     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
+     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
+     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
+     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
      <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

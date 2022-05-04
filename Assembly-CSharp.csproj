@@ -126,6 +126,10 @@
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutList.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListItem.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListPool.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
      <Compile Include="Assets\Project\Scripts\Configs\ElementConfig.cs" />
      <Compile Include="Assets\Project\Scripts\Configs\LevelConfig.cs" />
      <Compile Include="Assets\Project\Scripts\Constants\SceneNames.cs" />

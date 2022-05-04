@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 840e8413f70e418da1a8a88dfbc22ea8, type: 3}
   m_Name: SlimeConfig
   m_EditorClassIdentifier: 
-  _definition: {fileID: 0}
+  _definition: {fileID: 7202884074669973186, guid: af009b76f76cf4936b04a69802c04fdf,
+    type: 3}
   _defaultStats:
-    _maxHealth: 5
+    _maxHealth: 15
     _speed: 3
+    _element: 1

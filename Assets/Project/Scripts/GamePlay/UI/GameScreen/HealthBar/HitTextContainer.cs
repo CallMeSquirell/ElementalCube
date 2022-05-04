@@ -12,15 +12,12 @@ namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
         [SerializeField] private FloatingText _prefab;
 
         private readonly DefaultMonoBehaviourPool<FloatingText> _pool = new DefaultMonoBehaviourPool<FloatingText>();
-
-        private Transform _transform;
-
+        
         private ElementConfig _elementConfig;
 
         private void Awake()
         {
-            _transform = transform;
-            _pool.Initialise(_prefab, _transform);
+            _pool.Initialise(_prefab, transform);
         }
 
         public void PlaceHit(IHit hit, Vector3 position)
@@ -28,7 +25,7 @@ namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
             var color = _elementConfig.GetElementColor(hit.Element).Value;
             var text = _pool.Get();
             text.SetData(hit.Damage.ToString(), color, hit.Element == Element.Empty ? 0 : 1f);
-            text.Play(_transform.position);
+            text.Play(position);
         }
 
 

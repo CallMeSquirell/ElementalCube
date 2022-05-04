@@ -15,27 +15,99 @@ MonoBehaviour:
   _cubeView: {fileID: 6264788024692401453, guid: dda7fdfd1f0774d99be1d2671b18b59b,
     type: 3}
   _cubeSet:
-  - _damage: 15
-    _shotsPerSecond: 5
+  - _damage: 2
+    _shotsPerSecond: 2
     _shootRange: 5
-    _faces: 000000000000000000000000000000000000000000000000
-  - _damage: 15
-    _shotsPerSecond: 5
+    _faces:
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+  - _damage: 2
+    _shotsPerSecond: 2
     _shootRange: 5
-    _faces: 000000000000000000000000000000000000000000000000
-  - _damage: 15
-    _shotsPerSecond: 5
+    _faces:
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+  - _damage: 2
+    _shotsPerSecond: 2
     _shootRange: 5
-    _faces: 000000000000000000000000000000000000000000000000
-  - _damage: 15
-    _shotsPerSecond: 5
+    _faces:
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+  - _damage: 2
+    _shotsPerSecond: 2
     _shootRange: 5
-    _faces: 000000000000000000000000000000000000000000000000
-  - _damage: 15
-    _shotsPerSecond: 5
+    _faces:
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+  - _damage: 2
+    _shotsPerSecond: 2
     _shootRange: 5
-    _faces: 000000000000000000000000000000000000000000000000
-  - _damage: 15
-    _shotsPerSecond: 5
+    _faces:
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+  - _damage: 2
+    _shotsPerSecond: 2
     _shootRange: 5
-    _faces: 000000000000000000000000000000000000000000000000
+    _faces:
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2
+    - _bonus: 0
+      _element: 1
+    - _bonus: 0
+      _element: 3
+    - _bonus: 0
+      _element: 2

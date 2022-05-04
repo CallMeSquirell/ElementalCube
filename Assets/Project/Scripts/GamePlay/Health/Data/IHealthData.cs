@@ -9,6 +9,7 @@ namespace Project.Scripts.GamePlay.Health.Data
         event Action<IHit> LethalHitProcessed;
         int CurrentHealthCount { get; }
         int MaxHealthCount { get; }
+        double HealthPercent { get; }
         void AddHit(IHit value, bool apply = false);
         void ApplyDamage();
     }
