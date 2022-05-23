@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Project.Scripts.GamePlay.Cube.Data.Elements;
-using Project.Scripts.GamePlay.Cube.Data.Face;
+using Project.Scripts.GamePlay.Cube.Data.Faces.Extenstions;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
 using Zenject;
 

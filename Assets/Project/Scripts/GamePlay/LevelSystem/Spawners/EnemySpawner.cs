@@ -1,8 +1,9 @@
 using System.Collections;
-using Project.Scripts.Framework.ResourceManagement.Game.GameScreen.Models;
-using Project.Scripts.GamePlay.Enemy.Configs;
+using Project.Scripts.Configs;
+using Project.Scripts.GamePlay.Enemy;
 using Project.Scripts.GamePlay.Enemy.Data;
 using Project.Scripts.GamePlay.Enemy.Data.Stats;
+using Project.Scripts.GamePlay.Models;
 using UnityEngine;
 using Zenject;
 
@@ -12,26 +13,27 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
     {
         [SerializeField] private EnemySpawnerData _enemySpawnerData;
         [SerializeField] private Transform _spawnPoint;
-
-        private int _currentSpawnIndex;
+        
         private Coroutine _spawnCoroutine;
-        private EnemyConfig _enemyConfig;
         private IEnemyModel _enemyModel;
         private IEnemyFactory _enemyFactory;
+        private EnemyConfig _enemyConfig;
      
         private IEnemySpawnerData Data => _enemySpawnerData;
 
         [Inject]
-        public void Construct( IEnemyModel enemyModel, IEnemyFactory enemyFactory)
+        public void Construct(IEnemyModel enemyModel, 
+            IEnemyFactory enemyFactory, 
+            IConfig config)
         {
             _enemyFactory = enemyFactory;
             _enemyModel = enemyModel;
+            _enemyConfig = config.Get<EnemyConfig>();
         }
         
         public void Play()
         {
             Stop();
-            _currentSpawnIndex = 0;
             _spawnCoroutine = StartCoroutine(SpawnCoroutine());
         }
         
@@ -48,36 +50,27 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
         {
             var startDelay = Data.StartSpawnDelay;
             var waiter = new WaitForSeconds(Data.SpawnDeltaTime);
-            var list = Data.SlimeList;
 
             if (startDelay > 0)
             {
                 yield return new WaitForSeconds(startDelay);
             }
 
-            while (_currentSpawnIndex < list.Count)
+            while (_enemyModel.TryGetNextEnemy(out EnemyType type))
             {
-                var enemy = list[_currentSpawnIndex];
+                Spawn(type);
                 yield return waiter;
-                Spawn(enemy);
-                _currentSpawnIndex++;
             }
+            _spawnCoroutine = null;
         }
 
-        private void Spawn(IEnemyInfo info)
-        {
-            var enemy = _enemyFactory.Create(_spawnPoint);
-            var data = new EnemyData(info, enemy.transform);
+        private void Spawn(EnemyType type)
+        { 
+            var enemy = _enemyFactory.Create(_spawnPoint, type);
+            var data = new EnemyData(_enemyConfig.GetEnemyByType(type), enemy.transform);
             enemy.SetData(data);
             enemy.Attack(Data.Target);
-            data.Died += OnEnemyDied;
             _enemyModel.Place(data);
-        }
-
-        private void OnEnemyDied(IEnemyData enemyData)
-        {
-            enemyData.Died -= OnEnemyDied;
-            _enemyModel.Remove(enemyData);
         }
     }
 }

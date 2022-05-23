@@ -24,7 +24,7 @@ namespace Project.Scripts.GamePlay.Health.Hits.Pool
 
         protected override Hit CreateItem()
         {
-            return _instantiator.Instantiate<Hit>();
+            return new Hit();
         }
     }
 }

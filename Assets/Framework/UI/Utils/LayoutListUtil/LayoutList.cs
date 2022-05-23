@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Framework.UI.Utils
+namespace Framework.UI.Utils.LayoutListUtil
 {
     public abstract class LayoutList<T,K> : MonoBehaviour where T : LayoutListItem<K>
     {

@@ -8,9 +8,9 @@ namespace Framework.CoroutineManager
     {
         private readonly List<Coroutine> _activeCoroutines = new List<Coroutine>();
         
-        private MonoBehaviour _runner;
+        private Runner _runner;
 
-        private MonoBehaviour Runner => _runner != null ? _runner : _runner = PrepareRunner();
+        private Runner Runner => _runner != null ? _runner : _runner = PrepareRunner();
         
         public Coroutine Start(IEnumerator method)
         {
@@ -25,10 +25,10 @@ namespace Framework.CoroutineManager
             _activeCoroutines.Remove(coroutine);
         }
 
-        private MonoBehaviour PrepareRunner()
+        private Runner PrepareRunner()
         {
             var obj = new GameObject("Coroutine runner");
-            var component = obj.AddComponent<MonoBehaviour>();
+            var component = obj.AddComponent<Runner>();
             Object.DontDestroyOnLoad(obj);
             return component;
         }

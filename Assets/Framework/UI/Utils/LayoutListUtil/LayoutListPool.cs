@@ -2,7 +2,7 @@ using Framework.Pool;
 using UnityEngine;
 using Zenject;
 
-namespace Framework.UI.Utils
+namespace Framework.UI.Utils.LayoutListUtil
 {
     public class LayoutListPool<T> : AbstractPool<T> where T : ObjectPoolItem
     {

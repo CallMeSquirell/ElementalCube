@@ -30,7 +30,7 @@ namespace Project.Scripts.GamePlay.Watcher
                 _inRangeList.Contains(component))
             {
                 _inRangeList.Remove(component);
-                Entered?.Invoke(component);
+                Left?.Invoke(component);
             }
         }
     }

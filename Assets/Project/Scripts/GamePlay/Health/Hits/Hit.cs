@@ -9,6 +9,7 @@ namespace Project.Scripts.GamePlay.Health.Hits
         public int Damage { get; set; }
         public Element Element { get; set; }
 
+        public Hit(){}
         public Hit(int damage, Element element)
         {
             Damage = damage;

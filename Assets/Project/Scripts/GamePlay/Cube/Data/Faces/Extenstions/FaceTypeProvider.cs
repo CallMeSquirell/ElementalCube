@@ -1,8 +1,7 @@
 using System;
-using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Cube.Data.Faces.Impl;
 
-namespace Project.Scripts.GamePlay.Cube.Data.Face
+namespace Project.Scripts.GamePlay.Cube.Data.Faces.Extenstions
 {
     public static class FaceTypeProvider
     {

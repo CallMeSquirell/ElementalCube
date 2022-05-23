@@ -1,4 +1,5 @@
 using Framework.ResourceManagement;
+using Project.Scripts.Configs;
 using UnityEngine;
 using Zenject;
 

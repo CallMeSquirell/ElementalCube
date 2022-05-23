@@ -6,7 +6,7 @@ namespace Project.Scripts.GamePlay.Cube.Data.Elements
 {
     public class ElementProvider : IElementProvider
     {
-        private Dictionary<Element, IElement> _elementData = new Dictionary<Element, IElement>(
+        private readonly Dictionary<Element, IElement> _elementData = new Dictionary<Element, IElement>(
             new EnumComparator<Element>());
 
         public ElementProvider()
@@ -24,6 +24,7 @@ namespace Project.Scripts.GamePlay.Cube.Data.Elements
             _elementData.Add(Element.Krio, new KrioElement());
             _elementData.Add(Element.Piro, new PiroElement());
             _elementData.Add(Element.Electro, new ElectroElement());
+            _elementData.Add(Element.Empty, new DefaultElement());
         }
     }
 }

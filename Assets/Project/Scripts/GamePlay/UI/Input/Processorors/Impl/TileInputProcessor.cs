@@ -1,9 +1,10 @@
 using Framework.UI.Manager;
-using Project.Scripts.Framework.ResourceManagement;
-using Project.Scripts.GamePlay.Tile;
-using Project.Scripts.Input.Interfaces;
+using Project.Scripts.Constants;
+using Project.Scripts.GamePlay.Tile.Views;
+using Project.Scripts.GamePlay.UI.Input.System;
+using Project.Scripts.GamePlay.UI.Reroll;
 
-namespace Project.Scripts.Input.Processorors.Impl
+namespace Project.Scripts.GamePlay.UI.Input.Processorors.Impl
 {
     public class TileInputProcessor : IInputProcessor
     {
@@ -17,11 +18,21 @@ namespace Project.Scripts.Input.Processorors.Impl
 
         public void Click(ITouchable target)
         {
-            if (target is TileView tile && 
-                tile.Data.PlacedCube.Value == null)
+            if (target is TileView tile)
             {
-                _uiManager.OpenView(RegisteredViews.PlaceCubePopUp, tile.Data);
+                if (tile.Data.PlacedCube.Value == null)
+                {
+                    _uiManager.OpenView(RegisteredViews.PlaceCubePopUp, tile.Data);
+                }
+                else
+                {
+                    if (!tile.Data.PlacedCube.Value.IsUntargetable)
+                    {
+                        _uiManager.OpenView(RegisteredViews.RerollPopUp, new RerollPopUpPayload(tile.Data));
+                    }
+                }
             }
+           
         }
 
         public void TouchStarted(ITouchable target)

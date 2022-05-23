@@ -11,7 +11,8 @@ namespace Project.Scripts.GamePlay.Cube.Data
         IReadOnlyList<Faces.FaceType> Faces { get; }
         IBindableProperty<FaceType> CurrentFace { get; }
         CubeState State { get; }
-        ICubeInfo Stats { get; }
+        ICubeInfo Info { get; }
+        bool IsUntargetable { get; set; }
         void Reroll();
     }
 }

@@ -1,6 +1,6 @@
-using Project.Scripts.Input.Interfaces;
+using Project.Scripts.GamePlay.UI.Input.System;
 
-namespace Project.Scripts.Input.Processorors
+namespace Project.Scripts.GamePlay.UI.Input.Processorors
 {
     public interface IInputProcessor
     {

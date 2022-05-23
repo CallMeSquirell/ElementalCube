@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Framework.Extensions
 {
@@ -9,6 +10,13 @@ namespace Framework.Extensions
             var newColor = color;
             newColor.a = value;
             return newColor;
+        }
+        
+        public static void SetAlpha(this Image image, float value)
+        {
+            var newColor = image.color;
+            newColor.a = value;
+            image.color = newColor;
         }
     }
 }

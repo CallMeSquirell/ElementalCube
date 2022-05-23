@@ -106,6 +106,9 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Addressables">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
  </Reference>

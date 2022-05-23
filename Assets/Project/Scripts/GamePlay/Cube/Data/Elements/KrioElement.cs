@@ -1,4 +1,5 @@
 using Project.Scripts.GamePlay.Cube.Data.Faces;
+using UnityEngine;
 
 namespace Project.Scripts.GamePlay.Cube.Data.Elements
 {
@@ -8,18 +9,20 @@ namespace Project.Scripts.GamePlay.Cube.Data.Elements
         
         public bool ApplyExtraDamage(Element element, int damage, out int result)
         {
-            result = damage;
+           
             switch (element)
             {
                 case Element.Electro:
                     result = (int) (damage * 2f);
                     return true;
                 case Element.Piro:
-                    result = (int) (damage * 0.5f);
+                    result = Mathf.CeilToInt(damage * 1.5f);
                     break;
+                default:
+                    result = damage;
+                    return false;
             }
-
-            return false;
+            return true;
         }
     }
 }

@@ -19,16 +19,13 @@ namespace Project.Scripts.GamePlay.LevelSystem.Spawners
         private float _spawnDelay;
         
         [SerializeField] 
-        private List<EnemyInfo> _enemies;
-        
-        [SerializeField] private TownHall _townHall;
+        private TownHall _townHall;
         
         public float StartSpawnDelay => _startDelay;
 
         public float SpawnDeltaTime => _spawnDelay;
 
         public IAttackTarget Target => _townHall;
-        public IReadOnlyList<IEnemyInfo> SlimeList => _enemies;
-        
+
     }
 }

@@ -10,5 +10,6 @@ namespace Project.Scripts.GameControl.Models
         IReadOnlyList<ICubeInfo> AvailableCubeData { get; }
         void RefreshAvailableCubeDataList();
         void Retain(ICubeInfo data);
+        void Release(ICubeInfo cubeInfo);
     }
 }

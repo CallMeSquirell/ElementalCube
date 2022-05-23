@@ -11,8 +11,11 @@ namespace Project.Scripts.GamePlay.Enemy.Data
     {
         event Action<IEnemyData> Died;
         IBindableProperty<Element> CurrentElement { get; }
+        bool HasScore { get;}
         IHealthData HealthData { get; }
         IEnemyInfo Stats { get; }
         Transform Transform { get; }
+        void ApplyElement(Element element);
+        void Kill(bool withScore = false);
     }
 }

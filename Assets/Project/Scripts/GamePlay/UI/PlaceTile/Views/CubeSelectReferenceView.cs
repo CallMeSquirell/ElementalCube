@@ -1,11 +1,10 @@
 using System;
-using Framework.UI.Utils;
-using Project.Scripts.GamePlay.Cube.Data;
+using Framework.UI.Utils.LayoutListUtil;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.Scripts.UI.PlaceTile.Views
+namespace Project.Scripts.GamePlay.UI.PlaceTile.Views
 {
     public class CubeSelectReferenceView : LayoutListItem<ICubeInfo>
     {

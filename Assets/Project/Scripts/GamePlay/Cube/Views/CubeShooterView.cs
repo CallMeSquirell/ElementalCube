@@ -1,13 +1,12 @@
-using System.Collections;
 using Framework.Extensions;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
+using Project.Scripts.GamePlay.Enemy.Data;
 using Project.Scripts.GamePlay.Enemy.Views;
 using Project.Scripts.GamePlay.Health.Hits;
 using Project.Scripts.GamePlay.Health.Hits.Pool;
 using Project.Scripts.GamePlay.Watcher;
 using UnityEngine;
-using Zenject;
 
 namespace Project.Scripts.GamePlay.Cube.Views
 {
@@ -21,18 +20,13 @@ namespace Project.Scripts.GamePlay.Cube.Views
         private Coroutine _shootingCoroutine;
         private IFaceBonusData _faceBonusData;
         
-        private InRangeWatcher<EnemyView> _slimeWatcher = new InRangeWatcher<EnemyView>();
-        
-        private IHitPool HitPool => _hitPool;
+        private readonly InRangeWatcher<EnemyView> _slimeWatcher = new InRangeWatcher<EnemyView>();
         
         private ICubeInfo CubeInfo { get; set; }
 
-        [Inject]
-        public void Initialize(IHitPool hitPool)
-        {
-            _hitPool = hitPool;
-        }
-
+        private float _shootRate;
+        private float _timeToShot = 0;
+        
         private void Awake()
         {
             _slimeWatcher.Entered += OnEnemyEntered;
@@ -42,6 +36,7 @@ namespace Project.Scripts.GamePlay.Cube.Views
         public void SetData(ICubeInfo cubeInfo)
         {
             CubeInfo = cubeInfo;
+            _shootRate = 1f / CubeInfo.ShotsPerSecond;
         }
 
         public void SetFaceBonus(IFaceBonusData element)
@@ -59,7 +54,7 @@ namespace Project.Scripts.GamePlay.Cube.Views
             _slimeWatcher.Exit(other.gameObject);
         }
 
-        private  void OnEnemyEntered(EnemyView obj)
+        private void OnEnemyEntered(EnemyView obj)
         {
             if (!_currentAim.NonNull())
             {
@@ -67,7 +62,7 @@ namespace Project.Scripts.GamePlay.Cube.Views
             }
         }
 
-        private  void OnEnemyLeft(EnemyView obj)
+        private void OnEnemyLeft(EnemyView obj)
         {
             if (_currentAim == obj)
             {
@@ -77,48 +72,53 @@ namespace Project.Scripts.GamePlay.Cube.Views
 
         private void SelectNextAim()
         {
-            StopShooting();
-
-            if (_currentAim != null)
+            if (_currentAim.NonNull())
             {
-                _currentAim.Data.HealthData.LethalHitProcessed -= OnHealthDataLethalHitProcessed;
+                _currentAim.Data.Died -= OnHealthDataLethalHitProcessed;
                 _currentAim = null;
             }
 
             _currentAim = _slimeWatcher.InRangeList.First?.Value;
+            _timeToShot = 0;
 
             if (_currentAim != null)
             {
-                _currentAim.Data.HealthData.LethalHitProcessed += OnHealthDataLethalHitProcessed;
-                _shootingCoroutine = StartCoroutine(ShootingCoroutine());
+                _currentAim.Data.Died += OnHealthDataLethalHitProcessed;
             }
         }
-
-        private void StopShooting()
+        
+        private void OnHealthDataLethalHitProcessed(IEnemyData data)
         {
-            if (_shootingCoroutine != null)
+            _slimeWatcher.Exit(_currentAim.gameObject);
+        }
+
+        private void FixedUpdate()
+        {
+            if (!_currentAim.NonNull() || _faceBonusData == null)
             {
-                StopCoroutine(_shootingCoroutine);
+                return;
             }
-        }
-
-        private void OnHealthDataLethalHitProcessed(IHit obj)
-        {
-            SelectNextAim();
-        }
-
-        private IEnumerator ShootingCoroutine()
-        {
-            var waiter = new WaitForSeconds(1f / CubeInfo.ShotsPerSecond);
-            while (true)
+            
+            _timeToShot = Mathf.Clamp(_timeToShot - Time.fixedDeltaTime, 0, _shootRate);
+            
+            if (_timeToShot == 0)
             {
-                yield return waiter;
+                RefreshCallDown();
                 _faceBonusData.Process(_currentAim.Data, CubeInfo);
             }
+        }
+
+        private void RefreshCallDown()
+        {
+            _timeToShot = _shootRate;
         }
         
         private void OnDestroy()
         {
+            if (_currentAim.NonNull())
+            {
+                _currentAim.Data.Died -= OnHealthDataLethalHitProcessed;
+            }
             _slimeWatcher.Entered -= OnEnemyEntered;
             _slimeWatcher.Left -= OnEnemyLeft;
         }

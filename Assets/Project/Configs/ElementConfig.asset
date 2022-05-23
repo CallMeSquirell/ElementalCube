@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _elementInfo:
   - _element: 2
+    _sprite: {fileID: 21300000, guid: 727bc9e39033c4ff694c238c6744baf3, type: 3}
     _color: {r: 0.56928617, g: 0.16838734, b: 0.8301887, a: 1}
   - _element: 0
-    _color: {r: 0.92522955, g: 0.91193485, b: 0.9339623, a: 1}
+    _sprite: {fileID: 0}
+    _color: {r: 0.44001424, g: 0.4207903, b: 0.4528302, a: 1}
   - _element: 1
+    _sprite: {fileID: 21300000, guid: b96a0e9b3dc50477a96221d7e8902eef, type: 3}
     _color: {r: 0.8396226, g: 0.40095606, b: 0.23366857, a: 1}
   - _element: 3
+    _sprite: {fileID: 21300000, guid: 1423b7a38512044f985a230a615a2a8c, type: 3}
     _color: {r: 0.24350302, g: 0.84036857, b: 0.9056604, a: 1}

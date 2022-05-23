@@ -1,6 +1,6 @@
-using Project.Scripts.Input.Processorors;
+using Project.Scripts.GamePlay.UI.Input.Processorors;
 
-namespace Project.Scripts.Input.Models
+namespace Project.Scripts.GamePlay.UI.Input.Models
 {
     public interface IInputStrategyProvider
     {

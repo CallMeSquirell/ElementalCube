@@ -71,8 +71,33 @@
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
      <Compile Include="Assets\Framework\BindableProperties\BindableProperty.cs" />
      <Compile Include="Assets\Framework\BindableProperties\IBindableProperty.cs" />
+     <Compile Include="Assets\Framework\Commands\BaseCommands\BaseCommand.cs" />
+     <Compile Include="Assets\Framework\Commands\BaseCommands\Command.cs" />
+     <Compile Include="Assets\Framework\Commands\BaseCommands\IExecutableCommand.cs" />
+     <Compile Include="Assets\Framework\Commands\BaseCommands\ICommandPayload.cs" />
+     <Compile Include="Assets\Framework\Commands\CommandInstaller.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\ICommandBinder.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\ICommandBinding.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\ICommandExecutor.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\ICommandFactory.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\ICommandInfo.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\Impl\CommandBinder.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\Impl\CommandBinding.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\Impl\CommandExecutor.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\Impl\CommandFactory.cs" />
+     <Compile Include="Assets\Framework\Commands\Core\Impl\CommandInfo.cs" />
+     <Compile Include="Assets\Framework\Commands\Exception\NoSuchCommandException.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\ICommandQueue.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\ICommandQueueFactory.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\CommandQueue.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\CommandQueueFactory.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\QueuedCommand.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\PriorityQueue.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\IPriorityQueue.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\IQueuedCommand.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\CoroutineManager.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\ICoroutineManager.cs" />
+     <Compile Include="Assets\Framework\CoroutineManager\Runner.cs" />
      <Compile Include="Assets\Framework\Extensions\ColorExtenstion.cs" />
      <Compile Include="Assets\Framework\Extensions\EnumComparator.cs" />
      <Compile Include="Assets\Framework\Extensions\LinQExtensions.cs" />
@@ -80,6 +105,7 @@
      <Compile Include="Assets\Framework\Extensions\VectorExtensions.cs" />
      <Compile Include="Assets\Framework\MVVM\BaseView.cs" />
      <Compile Include="Assets\Framework\Pool\AbstractPool.cs" />
+     <Compile Include="Assets\Framework\Pool\DefaultMonoBehaviourPool.cs" />
      <Compile Include="Assets\Framework\Pool\IPool.cs" />
      <Compile Include="Assets\Framework\Pool\IPoolItem.cs" />
      <Compile Include="Assets\Framework\Pool\ObjectPoolItem.cs" />
@@ -90,7 +116,6 @@
      <Compile Include="Assets\Framework\Promises\PromiseAction.cs" />
      <Compile Include="Assets\Framework\Promises\PromiseActionQueue.cs" />
      <Compile Include="Assets\Framework\ResourceManagement\AssetManager.cs" />
-     <Compile Include="Assets\Framework\ResourceManagement\Config.cs" />
      <Compile Include="Assets\Framework\ResourceManagement\IAssetManager.cs" />
      <Compile Include="Assets\Framework\Singleton\Singleton.cs" />
      <Compile Include="Assets\Framework\UI\Animations\BaseTransition.cs" />
@@ -108,6 +133,7 @@
      <Compile Include="Assets\Framework\UI\MVP\DI\ViewFactory.cs" />
      <Compile Include="Assets\Framework\UI\MVP\Installers\MVPInstaller.cs" />
      <Compile Include="Assets\Framework\UI\MVP\Installers\ViewManagementInstaller.cs" />
+     <Compile Include="Assets\Framework\UI\MVP\Views\Core\BaseViewBehaviour.cs" />
      <Compile Include="Assets\Framework\UI\MVP\Views\Core\IPresenter.cs" />
      <Compile Include="Assets\Framework\UI\MVP\Views\Core\IScreenBaseView.cs" />
      <Compile Include="Assets\Framework\UI\MVP\Views\Core\Presenter.cs" />
@@ -122,6 +148,7 @@
      <Compile Include="Assets\Framework\UI\MVP\Views\ViewListeners\ViewListener.cs" />
      <Compile Include="Assets\Framework\UI\Manager\IUIManager.cs" />
      <Compile Include="Assets\Framework\UI\Manager\UIManager.cs" />
+     <Compile Include="Assets\Framework\UI\Utils\ActionPanel.cs" />
      <Compile Include="Assets\Framework\UI\Utils\Lable\LeadingLabele.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutList.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListItem.cs" />
@@ -130,20 +157,29 @@
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+     <Compile Include="Assets\Project\Scripts\Configs\Config.cs" />
+     <Compile Include="Assets\Project\Scripts\Configs\CubeSetConfig.cs" />
      <Compile Include="Assets\Project\Scripts\Configs\ElementConfig.cs" />
+     <Compile Include="Assets\Project\Scripts\Configs\EnemyConfig.cs" />
      <Compile Include="Assets\Project\Scripts\Configs\LevelConfig.cs" />
+     <Compile Include="Assets\Project\Scripts\Configs\PlayerConfig.cs" />
+     <Compile Include="Assets\Project\Scripts\Constants\EnergyCosts.cs" />
+     <Compile Include="Assets\Project\Scripts\Constants\PlayerPrefsKeys.cs" />
+     <Compile Include="Assets\Project\Scripts\Constants\RegisteredViews.cs" />
      <Compile Include="Assets\Project\Scripts\Constants\SceneNames.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Installers\CoreInstaller.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Installers\GameSceneInstaller.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Installers\GlobalInstaller.cs" />
-     <Compile Include="Assets\Project\Scripts\GameControl\Installers\UIInstaller.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\BootstrapController.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Loader\ILevelLoader.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Loader\LevelLoader.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Models\CubeSetModel.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Models\ICubeSetModel.cs" />
      <Compile Include="Assets\Project\Scripts\GameControl\Starter.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Configs\CubeConfig.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\Watchers\EnergyWatcher.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\Watchers\GameEndWatcher.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\Watchers\IWatcher.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\Watchers\IWatcherManager.cs" />
+     <Compile Include="Assets\Project\Scripts\GameControl\Watchers\WatcherManager.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\CubeData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\DefaultElement.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\ElectroElement.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\ElementProvider.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Elements\IElement.cs" />
@@ -163,13 +199,12 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Data\Stats\ICubeInfo.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\CubeShooterView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Cube\Views\CubeView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Configs\EnemyConfig.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\EnemyData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\IEnemyData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\Stats\EnemyInfo.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Data\Stats\IEnemyInfo.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\EnemyType.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Enemy\Views\EnemyView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\GamePlayInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Data\HealthData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Data\IHealthData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Hit.cs" />
@@ -177,30 +212,36 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Pool\HitPool.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\Hits\Pool\IHitPool.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Health\IAttackTarget.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Installers\GamePlayInstaller.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Level.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\LevelData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemyFactory.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemySpawner.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\EnemySpawnerData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\Spawners\IEnemySpawnerData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\ITownHallData.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\TownHall.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\LevelSystem\TownHalls\TownHallData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\EnemyModel.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Models\GameModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\IEnemyModel.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Models\IGameModel.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Models\IPlacedCubeModel.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Models\PlacedCubesModel.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\ITileData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileData.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\TileView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\GameScreenPresenter.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\GameScreenView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\DefaultMonoBehaviourPool.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\IInGameEnergyModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\IPlayerModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\ITownHallModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\InGameEnergyModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\PlayerModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Models\TownHallModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\Data\ITileData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\Data\TileData.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\Tile\Views\TileView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\EnergyBarView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\EnemyHealthBarContainer.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\FloatingText.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\HealthBar.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthBar\HitTextContainer.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\Models\EnemyModel.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\Models\IEnemyModel.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthPointSystme\HealthPoint.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\HealthPointSystme\HealthPointWidget.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\View\GameScreenPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\GameScreen\View\GameScreenView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Models\IInputStrategyProvider.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Models\InputStrategyProvider.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\Processorors\IInputProcessor.cs" />
@@ -208,11 +249,26 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\System\ITouchable.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Input\System\InputSystem.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\CubeSelectReferenceView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\FaceInfoView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\FacesInfoContainer.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\PlaceTileLayoutList.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\PlaceTilePopUpPresenter.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\PlaceTile\Views\PlaceTilePopUpView.cs" />
-     <Compile Include="Assets\Project\Scripts\GamePlay\UI\RegisteredViews.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Reroll\RerollPopUpPayload.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Reroll\RerollPopUpPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Reroll\RerollPopUpView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Result\ResultScreenPayload.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Result\ResultScreenPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Result\ResultScreenView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\EnemyPacksContainer.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\EnemyPreview.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\StartScreenPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\StartScreenView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\Watcher\InRangeWatcher.cs" />
+     <Compile Include="Assets\Project\Scripts\Installers\CoreInstaller.cs" />
+     <Compile Include="Assets\Project\Scripts\Installers\GlobalInstaller.cs" />
+     <Compile Include="Assets\Project\Scripts\Installers\UIInstaller.cs" />
+     <Compile Include="Assets\Project\Scripts\Util\LoadingScreen.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -222,6 +278,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -269,6 +326,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Addressables">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
@@ -832,6 +892,9 @@
       <Project>{395B9440-8CC7-1A13-64BF-39FA47ADE23B}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Framework\Commands\Editor" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

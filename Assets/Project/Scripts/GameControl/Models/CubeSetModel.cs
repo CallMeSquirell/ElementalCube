@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using Framework.ResourceManagement;
-using Project.Scripts.GamePlay.Cube.Configs;
+using Project.Scripts.Configs;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
 using Zenject;
 
@@ -25,7 +26,15 @@ namespace Project.Scripts.GameControl.Models
 
         public CubeSetModel(IConfig config)
         {
-            CurrentCubeSet = config.Get<CubeConfig>().CubeSet;
+            CurrentCubeSet = config.Get<CubeSetConfig>().CubeSet;
+        }
+
+        public void Release(ICubeInfo cubeInfo)
+        {
+            if (_currentCubeSet.Contains(cubeInfo))
+            {
+                _availableCubeData.Add(cubeInfo);
+            }
         }
 
         public void Retain(ICubeInfo cubeInfo)

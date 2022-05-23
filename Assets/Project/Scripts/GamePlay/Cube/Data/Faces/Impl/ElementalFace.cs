@@ -23,9 +23,27 @@ namespace Project.Scripts.GamePlay.Cube.Data.Faces.Impl
 
         public void Process(IEnemyData data, ICubeInfo info)
         {
-            var enemyElement = data.CurrentElement;
-            var damage = Element.ApplyExtraDamage(enemyElement.Value, info.Damage, out var resultElement);
-            data.HealthData.AddHit(_hitPool.Get(resultElement, damage ? Element.Element : Faces.Element.Empty), true);
+            var currentEnemyElement = data.CurrentElement;
+            var critDamage = Element.ApplyExtraDamage(currentEnemyElement.Value, info.Damage, out var resultElement);
+            Element element;
+            if (critDamage)
+            {
+                data.ApplyElement(Faces.Element.Empty);
+                element = Element.Element;
+            }
+            else
+            {
+                data.ApplyElement(Element.Element);
+                element = Faces.Element.Empty;
+            }
+            
+            AddHit(data, resultElement, element);
+        }
+
+        private void AddHit(IEnemyData data, int resultElement, Element element)
+        {
+            var hit = _hitPool.Get(resultElement, element);
+            data.HealthData.AddHit(hit, true);
         }
     }
 }

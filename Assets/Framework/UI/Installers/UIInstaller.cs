@@ -1,5 +1,4 @@
 using Framework.UI.Manager;
-using Project.Scripts.Input.Models;
 using UnityEngine;
 using Zenject;
 

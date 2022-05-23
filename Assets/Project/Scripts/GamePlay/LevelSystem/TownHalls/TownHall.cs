@@ -1,19 +1,25 @@
 using Project.Scripts.GamePlay.Health;
 using Project.Scripts.GamePlay.Health.Data;
+using Project.Scripts.GamePlay.Models;
 using UnityEngine;
+using Zenject;
 
 namespace Project.Scripts.GamePlay.LevelSystem.TownHalls
 {
     public class TownHall : MonoBehaviour, IAttackTarget
     {
-        [SerializeField] private TownHallData _data;
-        
+    
         private Transform _transform;
+        private ITownHallModel _townHallModel;
         public Vector3 Position => _transform.position;
 
-        public IHealthData HealthData => Data.HealthData;
-
-        public ITownHallData Data => _data;
+        public IHealthData HealthData => _townHallModel.TownHallHealth;
+        
+        [Inject]
+        public void Construct(ITownHallModel townHallModel)
+        {
+            _townHallModel = townHallModel;
+        }
         
         private void Awake()
         {

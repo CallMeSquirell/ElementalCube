@@ -4,7 +4,7 @@ using Framework.Pool;
 using TMPro;
 using UnityEngine;
 
-namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
+namespace Project.Scripts.GamePlay.UI.GameScreen.HealthBar
 {
     [RequireComponent(typeof(RectTransform))]
     public class FloatingText : ObjectPoolItem

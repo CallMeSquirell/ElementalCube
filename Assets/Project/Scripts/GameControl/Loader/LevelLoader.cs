@@ -1,35 +1,53 @@
+using Framework.Extensions;
 using Framework.Promises;
 using Framework.ResourceManagement;
-using Framework.UI.Manager;
-using Project.Scripts.Framework.ResourceManagement;
 using Project.Scripts.GamePlay.LevelSystem;
+using UnityEngine;
 using Zenject;
 
 namespace Project.Scripts.GameControl.Loader
 {
     public class LevelLoader : ILevelLoader
     {
+        private readonly string LevelPath = "Assets/Project/Prefabs/Levels/Level_{0}.prefab";
+    
         private readonly IInstantiator _instantiator;
         private readonly Level _currentLevel;
-        private readonly IConfig _assetManager;
-        private readonly IUIManager _uiManager;
+        private readonly IAssetManager _assetManager;
 
-        public LevelLoader(IInstantiator instantiator, IConfig assetManager, IUIManager uiManager)
+        private Level _nextLevel;
+        private Level _createdLevel;
+
+        public Level CreatedLevel => _createdLevel;
+
+        public LevelLoader(IInstantiator instantiator, IAssetManager assetManager)
         {
             _instantiator = instantiator;
             _assetManager = assetManager;
-            _uiManager = uiManager;
         }
 
-        public IPromise Load()
+        public IPromise LoadNextLevel(int levelIndex)
         {
-            return _assetManager.Load().Then(() =>
+            var promise = new Promise();
+            _assetManager.LoadPrefabForComponent<Level>(string.Format(LevelPath, levelIndex)).Then(prefab =>
             {
-                var config = _assetManager.Get<LevelConfig>();
-                _instantiator.InstantiatePrefab(config.Level);
-                _uiManager.Initialise();
-                _uiManager.OpenView(RegisteredViews.GameScreen);
-            }); 
+                _nextLevel = prefab;
+                promise.Dispatch();
+            }).Fail(promise.Abort);
+            return promise;
+        }
+
+        public void SetUpNextLevel()
+        {
+            if (_createdLevel.NonNull())
+            {
+                Object.Destroy(_createdLevel.gameObject);
+            }
+            
+            if (_nextLevel.NonNull())
+            {
+                _createdLevel = _instantiator.InstantiatePrefabForComponent<Level>(_nextLevel);
+            }
         }
     }
 }

@@ -1,11 +1,10 @@
-using System;
-using Project.Scripts.GameControl;
+using Framework.Pool;
+using Project.Scripts.Configs;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Health.Hits;
-using TMPro;
 using UnityEngine;
 
-namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
+namespace Project.Scripts.GamePlay.UI.GameScreen.HealthBar
 {
     public class HitTextContainer : MonoBehaviour
     {

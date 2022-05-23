@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Project.Scripts.GamePlay.Cube.Data.Face;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 
 namespace Project.Scripts.GamePlay.Cube.Data.Stats

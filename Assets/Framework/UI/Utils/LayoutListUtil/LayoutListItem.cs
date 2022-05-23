@@ -1,6 +1,6 @@
 using Framework.Pool;
 
-namespace Framework.UI.Utils
+namespace Framework.UI.Utils.LayoutListUtil
 {
     public abstract class LayoutListItem<T> : ObjectPoolItem
     {

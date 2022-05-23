@@ -1,8 +1,8 @@
 using System;
-using Framework.UI.Utils;
+using Framework.UI.Utils.LayoutListUtil;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
 
-namespace Project.Scripts.UI.PlaceTile.Views
+namespace Project.Scripts.GamePlay.UI.PlaceTile.Views
 {
     public class PlaceTileLayoutList : LayoutList<CubeSelectReferenceView, ICubeInfo>
     {

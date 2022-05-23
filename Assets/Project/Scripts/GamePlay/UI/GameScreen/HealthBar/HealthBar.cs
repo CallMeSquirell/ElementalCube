@@ -1,12 +1,12 @@
 using Framework.UI.Utils.Lable;
-using Project.Scripts.GameControl;
+using Project.Scripts.Configs;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Enemy.Data;
 using Project.Scripts.GamePlay.Health.Hits;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
+namespace Project.Scripts.GamePlay.UI.GameScreen.HealthBar
 {
     public class HealthBar : LeadingLabele
     {
@@ -28,6 +28,7 @@ namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
             UnSubscribe();
             _data = enemy;
             _damageContainer = damageContainer;
+            SetUpTarget(enemy.Transform);
             Subscribe();
             UpdateBar();
         }
@@ -44,7 +45,8 @@ namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
 
         private void OnElementChanged(Element obj)
         {
-            _image.color = _config.GetElementColor(obj).Value;
+            _image.enabled = Element.Empty != obj;
+            _image.sprite = _config.GetElementInfo(obj)?.Sprite;
         }
 
         private void OnGetDamage(IHit hit)
@@ -71,6 +73,7 @@ namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
         private void OnEnemyDied(IEnemyData enemy)
         {
             UnSubscribe();
+            _data = null;
             Release();
         }
     }

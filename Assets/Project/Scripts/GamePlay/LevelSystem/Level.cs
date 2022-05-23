@@ -5,13 +5,10 @@ using Zenject;
 
 namespace Project.Scripts.GamePlay.LevelSystem
 {
-    public class Level : MonoBehaviour, IInitializable
+    public class Level : MonoBehaviour
     {
         [SerializeField] private EnemySpawner _enemySpawner;
-        
-        public void Initialize()
-        {
-           _enemySpawner.Play();
-        }
+
+        public EnemySpawner EnemySpawner => _enemySpawner;
     }
 }

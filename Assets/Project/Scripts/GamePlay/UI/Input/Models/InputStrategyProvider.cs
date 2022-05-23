@@ -1,8 +1,8 @@
-using Project.Scripts.Input.Processorors;
-using Project.Scripts.Input.Processorors.Impl;
+using Project.Scripts.GamePlay.UI.Input.Processorors;
+using Project.Scripts.GamePlay.UI.Input.Processorors.Impl;
 using Zenject;
 
-namespace Project.Scripts.Input.Models
+namespace Project.Scripts.GamePlay.UI.Input.Models
 {
     public class InputStrategyProvider : IInputStrategyProvider
     {

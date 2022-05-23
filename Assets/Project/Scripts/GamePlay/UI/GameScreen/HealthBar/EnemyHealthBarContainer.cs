@@ -1,8 +1,9 @@
-using Project.Scripts.GameControl;
+using Framework.Pool;
+using Project.Scripts.Configs;
 using Project.Scripts.GamePlay.Enemy.Data;
 using UnityEngine;
 
-namespace Project.Scripts.Framework.ResourceManagement.Game.GameScreen
+namespace Project.Scripts.GamePlay.UI.GameScreen.HealthBar
 {
     public class EnemyHealthBarContainer : MonoBehaviour
     {

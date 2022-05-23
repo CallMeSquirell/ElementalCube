@@ -1,11 +1,10 @@
 using System;
 using Framework.Extensions;
 using Framework.UI.Animations;
-using UnityEngine;
 
 namespace Framework.UI.MVP.Views.Core
 {
-    public class ScreenBaseView : MonoBehaviour, IScreenBaseView
+    public class ScreenBaseView : BaseViewBehaviour, IScreenBaseView
     {
         public event Action<bool> FocusChanged;
         public event Action Opened;
@@ -24,12 +23,12 @@ namespace Framework.UI.MVP.Views.Core
             }
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _transition = GetComponent<BaseTransition>();
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             if (_transition.NonNull())
             {

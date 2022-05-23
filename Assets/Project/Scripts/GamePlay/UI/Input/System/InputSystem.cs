@@ -1,14 +1,15 @@
-using Project.Scripts.Input.Interfaces;
-using Project.Scripts.Input.Models;
+using Project.Scripts.GamePlay.UI.Input.Models;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
 
-namespace Project.Scripts.Input
+namespace Project.Scripts.GamePlay.UI.Input.System
 {
     public class InputSystem: MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
+        [SerializeField] private float _maxDistance = 2000f;
         [SerializeField] private Camera _camera;
+        [SerializeField] private LayerMask _layerMask = 10;
         
         private ITouchable _firstSelected;
         private ITouchable _currentSelected;
@@ -57,7 +58,7 @@ namespace Project.Scripts.Input
         
         private bool CheckAndSetUp(Vector2 position)
         {
-            if (Physics.Raycast(_camera.ScreenPointToRay(position), out var hit, 150, LayerMask.NameToLayer("Input")) &&
+            if (Physics.Raycast(_camera.ScreenPointToRay(position), out var hit, _maxDistance, _layerMask) &&
                 hit.transform.TryGetComponent(out _currentSelected))
             {
                 return true;
