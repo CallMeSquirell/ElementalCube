@@ -17,3 +17,13 @@ MonoBehaviour:
     _packs:
     - _type: 0
       _count: 5
+    - _type: 1
+      _count: 4
+  - _levelNumber: 2
+    _packs:
+    - _type: 0
+      _count: 5
+    - _type: 1
+      _count: 5
+    - _type: 2
+      _count: 5

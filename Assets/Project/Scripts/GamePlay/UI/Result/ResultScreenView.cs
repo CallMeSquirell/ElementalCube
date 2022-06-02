@@ -13,6 +13,7 @@ namespace Project.Scripts.GamePlay.UI.Result
         [SerializeField] private Button _nextLevel;
         [SerializeField] private TextMeshProUGUI _buttonText;
         [SerializeField] private TextMeshProUGUI _resultText;
+        [SerializeField] private GameObject _winStars;
 
         protected override void Awake()
         {
@@ -42,6 +43,7 @@ namespace Project.Scripts.GamePlay.UI.Result
                 _buttonText.text = "Restart";
                 _resultText.text = "YOU LOSE";
             }
+            _winStars.SetActive(payloadIsWon);
         }
     }
 }

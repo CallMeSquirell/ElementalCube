@@ -11,6 +11,7 @@ using Project.Scripts.GamePlay.UI.GameScreen.View;
 using Project.Scripts.GamePlay.UI.PlaceTile.Views;
 using Project.Scripts.GamePlay.UI.Reroll;
 using Project.Scripts.GamePlay.UI.Result;
+using Project.Scripts.GamePlay.UI.Settings;
 using Project.Scripts.GamePlay.UI.StartScreen;
 
 namespace Project.Scripts.GamePlay.Installers
@@ -28,6 +29,7 @@ namespace Project.Scripts.GamePlay.Installers
             presenterContainer.BindView<RerollPopUpView>().To<RerollPopUpPresenter>();
             presenterContainer.BindView<ResultScreenView>().To<ResultScreenPresenter>();
             presenterContainer.BindView<StartScreenView>().To<StartScreenPresenter>();
+            presenterContainer.BindView<SettingsView>().To<SettingsPresenter>();
         }
 
         protected override void InstallCommon()

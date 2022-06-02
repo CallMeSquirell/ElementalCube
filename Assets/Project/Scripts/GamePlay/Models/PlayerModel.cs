@@ -18,8 +18,7 @@ namespace Project.Scripts.GamePlay.Models
 
         public void CompleteLevel()
         {
-            var nextLevel = _currentLevel.LevelNumber;
-                            //+ 1;
+            var nextLevel = _currentLevel.LevelNumber + 1;
             PlayerPrefs.SetInt(PlayerPrefsKeys.CurrentLevel,nextLevel);
             _currentLevel =  _config.Get<LevelConfig>().GetDataByNumber(nextLevel);
         }

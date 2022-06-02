@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  m_GroupName: UI
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d80cd9fa60a884d50be8b60ba06a4cf0
+  m_SerializeEntries:
+  - m_GUID: 6a730936708534275a3c682510822b48
+    m_Address: Assets/Bundles/CubeSelectReference.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 8938387303209717138, guid: 6a730936708534275a3c682510822b48,
+      type: 3}
+    m_TargetAsset: {fileID: 8938387303209717138, guid: 6a730936708534275a3c682510822b48,
+      type: 3}
+  - m_GUID: 2d09000d62fbf4f48a55e0d027849c75
+    m_Address: Assets/Project/Configs/LevelConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: 2d09000d62fbf4f48a55e0d027849c75, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 2d09000d62fbf4f48a55e0d027849c75, type: 2}
+  - m_GUID: e5675df38f02b4b02acd62ef042e147b
+    m_Address: Assets/Bundles/UI/PlaceCubePopUp/View_PlaceCubePopUp.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 61898715313101554, guid: e5675df38f02b4b02acd62ef042e147b,
+      type: 3}
+    m_TargetAsset: {fileID: 61898715313101554, guid: e5675df38f02b4b02acd62ef042e147b,
+      type: 3}
+  - m_GUID: af398b4a48917481aa33189c767a6a9d
+    m_Address: Assets/Project/Material/Tile.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: af398b4a48917481aa33189c767a6a9d, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: af398b4a48917481aa33189c767a6a9d, type: 2}
+  - m_GUID: a796cf16e7616485ebcfa9539aa1a153
+    m_Address: Assets/Project/Configs/CubeSetConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: a796cf16e7616485ebcfa9539aa1a153, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: a796cf16e7616485ebcfa9539aa1a153, type: 2}
+  - m_GUID: ecb60bcec308e4d91a80ddc6d943f9d3
+    m_Address: Assets/Project/Configs/ElementConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: ecb60bcec308e4d91a80ddc6d943f9d3, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: ecb60bcec308e4d91a80ddc6d943f9d3, type: 2}
+  - m_GUID: c4db9cd930c1b4079815b2860cb64b9e
+    m_Address: Assets/Bundles/UI/GameScreen/View_GameScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 756051525807428375, guid: c4db9cd930c1b4079815b2860cb64b9e,
+      type: 3}
+    m_TargetAsset: {fileID: 756051525807428375, guid: c4db9cd930c1b4079815b2860cb64b9e,
+      type: 3}
+  - m_GUID: dc9ef5b8072fb490f8bd178feb480d6b
+    m_Address: Assets/Project/Configs/EnemyConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: dc9ef5b8072fb490f8bd178feb480d6b, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: dc9ef5b8072fb490f8bd178feb480d6b, type: 2}
+  - m_GUID: d15ef698f1cb5491aab7e8c9ddcd8e41
+    m_Address: Assets/Project/Configs/PlayerConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: d15ef698f1cb5491aab7e8c9ddcd8e41, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: d15ef698f1cb5491aab7e8c9ddcd8e41, type: 2}
+  - m_GUID: 9a730db13bcd841e39c4b066ac83ae9e
+    m_Address: Assets/Bundles/UI/Reroll/RerolPopUP.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 668602336853757101, guid: 9a730db13bcd841e39c4b066ac83ae9e,
+      type: 3}
+    m_TargetAsset: {fileID: 668602336853757101, guid: 9a730db13bcd841e39c4b066ac83ae9e,
+      type: 3}
+  - m_GUID: 30f253f6aa0fa442cb6a51dc5eebb270
+    m_Address: Assets/Project/Prefabs/Levels/Level_1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 7366438665062765916, guid: 30f253f6aa0fa442cb6a51dc5eebb270,
+      type: 3}
+    m_TargetAsset: {fileID: 7366438665062765916, guid: 30f253f6aa0fa442cb6a51dc5eebb270,
+      type: 3}
+  - m_GUID: 3a3a7ecc492cb4750a21282c80897812
+    m_Address: Assets/Bundles/UI/ResultScreen/View_Settings
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1142468823913359876, guid: 3a3a7ecc492cb4750a21282c80897812,
+      type: 3}
+    m_TargetAsset: {fileID: 1142468823913359876, guid: 3a3a7ecc492cb4750a21282c80897812,
+      type: 3}
+  - m_GUID: a7c7d42ac47864a7f9b73641f11e1f0a
+    m_Address: Assets/Bundles/UI/StartScreen/View_StartScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3755722727247286245, guid: a7c7d42ac47864a7f9b73641f11e1f0a,
+      type: 3}
+    m_TargetAsset: {fileID: 3755722727247286245, guid: a7c7d42ac47864a7f9b73641f11e1f0a,
+      type: 3}
+  - m_GUID: 13ea5adb8b33d4b52b1168173e26b92c
+    m_Address: Assets/Bundles/UI/ResultScreen/View_ResultScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1142468823913359876, guid: 13ea5adb8b33d4b52b1168173e26b92c,
+      type: 3}
+    m_TargetAsset: {fileID: 1142468823913359876, guid: 13ea5adb8b33d4b52b1168173e26b92c,
+      type: 3}
+  - m_GUID: b7a0677d2db954e0abd96246e2af57a1
+    m_Address: Assets/Project/Prefabs/Levels/Level_2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 7366438665062765916, guid: b7a0677d2db954e0abd96246e2af57a1,
+      type: 3}
+    m_TargetAsset: {fileID: 7366438665062765916, guid: b7a0677d2db954e0abd96246e2af57a1,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ac0adea4b0b754d5fac40f9f9db44c37, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d8ea39969df9a4cafaeba9b503b64229, type: 2}
+    - {fileID: 11400000, guid: 3a4657e26d35e40ca8b8d74e6eab0663, type: 2}

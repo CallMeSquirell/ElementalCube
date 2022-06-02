@@ -12,8 +12,9 @@ namespace Framework.UI.MVP.Views.PopUp
 
         [SerializeField] private Button _closeButton;
 
-        protected virtual void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             if (_closeButton.NonNull())
             {
                 _closeButton.onClick.AddListener(OnCloseButtonClicked);

@@ -8,6 +8,7 @@ namespace Project.Scripts.Constants
         //PopUp
         public static readonly IViewDefinition PlaceCubePopUp = new ViewDefinition("PlaceCubePopUp", WindowLayerEnum.PopUp, "Assets/Bundles/UI/PlaceCubePopUp/View_PlaceCubePopUp.prefab");
         public static readonly IViewDefinition RerollPopUp = new ViewDefinition("RerollPopUp", WindowLayerEnum.PopUp, "Assets/Bundles/UI/Reroll/RerolPopUP.prefab");
+        public static readonly IViewDefinition SettingsPopUp = new ViewDefinition("SettingsPopUp", WindowLayerEnum.PopUp, "Assets/Bundles/UI/ResultScreen/View_Settings");
         
         //Screens
         public static readonly IViewDefinition GameScreen = new ViewDefinition("GameScreen", WindowLayerEnum.Game, "Assets/Bundles/UI/GameScreen/View_GameScreen.prefab");

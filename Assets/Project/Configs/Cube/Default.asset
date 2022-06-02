@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cubeName: Default
   _sprite: {fileID: 0}
-  _damage: 1
+  _damage: 3
   _shotsPerSecond: 1
   _shootRange: 1
   _faces:
@@ -25,8 +25,8 @@ MonoBehaviour:
   - _bonus: 0
     _element: 3
   - _bonus: 0
-    _element: 0
+    _element: 3
   - _bonus: 0
-    _element: 0
+    _element: 1
   - _bonus: 0
-    _element: 0
+    _element: 2

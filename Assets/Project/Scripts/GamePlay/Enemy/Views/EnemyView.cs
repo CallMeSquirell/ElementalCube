@@ -14,6 +14,14 @@ namespace Project.Scripts.GamePlay.Enemy.Views
     {
         [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] private Transform _childTransform;
+        [SerializeField] private Renderer _renderer;
+        
+        [Space]
+        [SerializeField] private Material _piroMatirial;
+        [SerializeField] private Material _krioMaterial;
+        [SerializeField] private Material _electroMatirial;
+        [SerializeField] private Material _emptyMatirial;
+
         private IAttackTarget _target;
         private Transform _transform;
         private Coroutine _coroutine;
@@ -26,8 +34,28 @@ namespace Project.Scripts.GamePlay.Enemy.Views
         protected override void Initialize()
         {
             Data.Died += OnDied;
+            Data.CurrentElement.BindAndInvoke(OnElementChanged);
         }
-        
+
+        private void OnElementChanged(Element obj)
+        {
+            switch (obj)
+            {
+                case Element.Piro:
+                    _renderer.material = _piroMatirial;
+                    break;
+                case Element.Krio:
+                    _renderer.material = _krioMaterial;
+                    break;
+                case Element.Electro:
+                    _renderer.material = _electroMatirial;
+                    break;
+                case Element.Empty:
+                    _renderer.material = _emptyMatirial;
+                    break;
+            }
+        }
+
         protected override void UnBind()
         {
             Data.Died -= OnDied;

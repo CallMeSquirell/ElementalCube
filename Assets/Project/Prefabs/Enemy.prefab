@@ -102,6 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 7202884074669973187}
   _childTransform: {fileID: 7456548929391953512}
+  _renderer: {fileID: 5342214012619731854}
+  _piroMatirial: {fileID: 2100000, guid: 1603c01b0c678414b85bdbd2987acb38, type: 2}
+  _krioMaterial: {fileID: 2100000, guid: 4819bb450ab314c73ba84c072b51a88f, type: 2}
+  _electroMatirial: {fileID: 2100000, guid: 84bb02703680f42b383ace627989949e, type: 2}
+  _emptyMatirial: {fileID: 2100000, guid: 76e44ea2177e842ffb952f0650b220e5, type: 2}
 --- !u!136 &7202884074669973185
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -214,6 +219,12 @@ PrefabInstance:
 --- !u!4 &5383516470307056635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3407281841974725743, guid: f9b0110f1d816405d8502efb744b2bd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 7349610144417130388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5342214012619731854 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3448723960999908378, guid: f9b0110f1d816405d8502efb744b2bd0,
     type: 3}
   m_PrefabInstance: {fileID: 7349610144417130388}
   m_PrefabAsset: {fileID: 0}

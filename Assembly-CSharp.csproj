@@ -25,7 +25,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_23;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_23;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -73,8 +73,8 @@
      <Compile Include="Assets\Framework\BindableProperties\IBindableProperty.cs" />
      <Compile Include="Assets\Framework\Commands\BaseCommands\BaseCommand.cs" />
      <Compile Include="Assets\Framework\Commands\BaseCommands\Command.cs" />
-     <Compile Include="Assets\Framework\Commands\BaseCommands\IExecutableCommand.cs" />
      <Compile Include="Assets\Framework\Commands\BaseCommands\ICommandPayload.cs" />
+     <Compile Include="Assets\Framework\Commands\BaseCommands\IExecutableCommand.cs" />
      <Compile Include="Assets\Framework\Commands\CommandInstaller.cs" />
      <Compile Include="Assets\Framework\Commands\Core\ICommandBinder.cs" />
      <Compile Include="Assets\Framework\Commands\Core\ICommandBinding.cs" />
@@ -89,12 +89,12 @@
      <Compile Include="Assets\Framework\Commands\Exception\NoSuchCommandException.cs" />
      <Compile Include="Assets\Framework\Commands\ExecutableQueue\ICommandQueue.cs" />
      <Compile Include="Assets\Framework\Commands\ExecutableQueue\ICommandQueueFactory.cs" />
-     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\CommandQueue.cs" />
-     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\CommandQueueFactory.cs" />
-     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\QueuedCommand.cs" />
-     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\PriorityQueue.cs" />
      <Compile Include="Assets\Framework\Commands\ExecutableQueue\IPriorityQueue.cs" />
      <Compile Include="Assets\Framework\Commands\ExecutableQueue\IQueuedCommand.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\CommandQueue.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\CommandQueueFactory.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\PriorityQueue.cs" />
+     <Compile Include="Assets\Framework\Commands\ExecutableQueue\Impl\QueuedCommand.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\CoroutineManager.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\ICoroutineManager.cs" />
      <Compile Include="Assets\Framework\CoroutineManager\Runner.cs" />
@@ -153,6 +153,7 @@
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutList.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListItem.cs" />
      <Compile Include="Assets\Framework\UI\Utils\LayoutListUtil\LayoutListPool.cs" />
+     <Compile Include="Assets\Liam Gallagher\BuildDebugging\DebugConsole\DebugConsole.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -260,6 +261,8 @@
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Result\ResultScreenPayload.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Result\ResultScreenPresenter.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\Result\ResultScreenView.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Settings\SettingsPresenter.cs" />
+     <Compile Include="Assets\Project\Scripts\GamePlay\UI\Settings\SettingsView.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\EnemyPacksContainer.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\EnemyPreview.cs" />
      <Compile Include="Assets\Project\Scripts\GamePlay\UI\StartScreen\StartScreenPresenter.cs" />
@@ -338,6 +341,9 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+ <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/admin/RiderProjects/Diplom/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -888,13 +894,18 @@
       <Project>{A1A1FDCF-0015-859F-C00B-F77F64E4E2DC}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Runtime.csproj">
+      <Project>{4C003154-0AFA-CC22-EF3D-4464494ACB5F}</Project>
+      <Name>IngameDebugConsole.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="IngameDebugConsole.Editor.csproj">
+      <Project>{56A5DA98-C26B-4C2C-13A0-E06B8DE143FC}</Project>
+      <Name>IngameDebugConsole.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
       <Project>{395B9440-8CC7-1A13-64BF-39FA47ADE23B}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Framework\Commands\Editor" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
