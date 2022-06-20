@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Framework.BindableProperties;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Cube.Data.State;
@@ -15,7 +16,7 @@ namespace Project.Scripts.GamePlay.Cube.Data
         public CubeState State { get; } =  new CubeState();
         public IReadOnlyList<FaceType> Faces { get; }
         public IBindableProperty<FaceType> CurrentFace => _currentFace;
-        private FaceType RandomFace => Faces[Random.Range(0, Faces.Count)];
+        private FaceType RandomFace => Faces.Where(face => face != _currentFace.Value).ToList()[Random.Range(0, Faces.Count)];
 
         public bool IsUntargetable { get; set; }
 
@@ -23,7 +24,7 @@ namespace Project.Scripts.GamePlay.Cube.Data
         {
             Faces = faces;
             Info = stats;
-            _currentFace = new BindableProperty<FaceType>(RandomFace);
+            _currentFace = new BindableProperty<FaceType>(Faces[Random.Range(0, Faces.Count)]);
         }
 
         public void Reroll()

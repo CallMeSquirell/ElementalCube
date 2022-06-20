@@ -58,7 +58,7 @@ namespace Project.Scripts.GamePlay.UI.StartScreen
         private void ResetModels()
         {
             _cubeSetModel.RefreshAvailableCubeDataList();
-            _energyModel.FullFill();
+            _energyModel.Reset();
             _townHallModel.Reset();
         }
 

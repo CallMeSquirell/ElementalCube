@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 4c8e95b85900940d791dee51a76c5628
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3765e9094737e4782b4630c51242e9ca
+    m_Address: Assets/Project/Configs/FaceListConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ac0adea4b0b754d5fac40f9f9db44c37, type: 2}
   m_SchemaSet:

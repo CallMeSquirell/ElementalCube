@@ -15,6 +15,7 @@ namespace Project.Scripts.GamePlay.Enemy.Views
         [SerializeField] private NavMeshAgent _navMeshAgent;
         [SerializeField] private Transform _childTransform;
         [SerializeField] private Renderer _renderer;
+        [SerializeField] private ParticleSystem _particleSystem;
         
         [Space]
         [SerializeField] private Material _piroMatirial;
@@ -34,7 +35,13 @@ namespace Project.Scripts.GamePlay.Enemy.Views
         protected override void Initialize()
         {
             Data.Died += OnDied;
+            Data.HealthData.HitProcessed += OnGotHit;
             Data.CurrentElement.BindAndInvoke(OnElementChanged);
+        }
+
+        private void OnGotHit(IHit obj)
+        {
+            _particleSystem.Play();
         }
 
         private void OnElementChanged(Element obj)
@@ -59,6 +66,7 @@ namespace Project.Scripts.GamePlay.Enemy.Views
         protected override void UnBind()
         {
             Data.Died -= OnDied;
+            Data.HealthData.HitProcessed -= OnGotHit;
         }
 
         private void OnDied(IEnemyData died)

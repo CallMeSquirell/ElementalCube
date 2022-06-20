@@ -1,5 +1,7 @@
+using System;
 using DG.Tweening;
 using Framework.MVVM;
+using Project.Scripts.Configs;
 using Project.Scripts.GamePlay.Cube.Data;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using UnityEngine;
@@ -10,6 +12,7 @@ namespace Project.Scripts.GamePlay.Cube.Views
     {
         [SerializeField] private CubeShooterView _cubeShooterView;
         [SerializeField] private Transform _cube;
+        [SerializeField] private MeshRenderer _renderer;
 
         private FaceStateMachine _faceStateMachine;
         private Sequence _sequence;
@@ -19,6 +22,27 @@ namespace Project.Scripts.GamePlay.Cube.Views
             _cubeShooterView.SetData(Data.Info);
             _faceStateMachine = Instantiator.Instantiate<FaceStateMachine>();
             Data.CurrentFace.BindAndInvoke(OnFaceChanged);
+            SetFaces();
+        }
+
+        private void SetFaces()
+        {
+            var top = Config.Get<FaceListConfig>().GetConfig(Data.Faces[0]);
+            var front = Config.Get<FaceListConfig>().GetConfig(Data.Faces[1]);
+            var bottom = Config.Get<FaceListConfig>().GetConfig(Data.Faces[2]);
+            var back = Config.Get<FaceListConfig>().GetConfig(Data.Faces[3]);
+            var left = Config.Get<FaceListConfig>().GetConfig(Data.Faces[4]);
+            var right = Config.Get<FaceListConfig>().GetConfig(Data.Faces[5]);
+            _renderer.materials = new[]
+            {
+                right,
+                bottom,
+                _renderer.materials[2],
+                top,
+                front,
+                left,
+                back,
+            };
         }
 
         private void OnFaceChanged(FaceType type)
@@ -29,11 +53,31 @@ namespace Project.Scripts.GamePlay.Cube.Views
         
         private void Reroll()
         {
+            Debug.Log("Reroll " + Data.CurrentFace.Value.Element);
             Data.IsUntargetable = true;
-            var endValue = _cube.rotation.eulerAngles + new Vector3(0,180,180);
-            endValue = new Vector3(endValue.x, endValue.y % 360, endValue.z % 360);
-            _sequence = DOTween.Sequence().Append(_cube.DOLocalRotate(endValue,0.5f ))
+            _sequence = DOTween.Sequence().Append(_cube.DOLocalRotate(GetRoll(),0.5f ))
                 .OnComplete(OnAnimationCompleted);
+        }
+
+        private Vector3 GetRoll()
+        {
+            for (int i = 0; i < Data.Faces.Count; i++)
+            {
+                if (Data.CurrentFace.Value.Element == Data.Faces[i].Element)
+                {
+                    switch (i)
+                    {
+                       case 0: return Vector3.zero;
+                       case 3: return new Vector3(90, 0,0);
+                       case 2: return new Vector3(180, 0,0);
+                       case 1: return new Vector3(-90, 0,0);
+                       case 4: return new Vector3(0, 0, 90);
+                       case 5: return new Vector3(0, 0,-90);
+                    }
+                    break;
+                }
+            }
+            return Vector3.zero;
         }
         
         private void OnAnimationCompleted()

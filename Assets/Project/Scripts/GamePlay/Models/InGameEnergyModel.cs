@@ -19,7 +19,7 @@ namespace Project.Scripts.GamePlay.Models
 
         public void Reset()
         {
-            _count.Value = MinCount;
+            _count.Value = 50;
         }
 
         public bool TryPay(int count)

@@ -1,3 +1,4 @@
+using System.Collections;
 using Framework.Extensions;
 using Project.Scripts.GamePlay.Cube.Data.Faces;
 using Project.Scripts.GamePlay.Cube.Data.Stats;
@@ -13,6 +14,7 @@ namespace Project.Scripts.GamePlay.Cube.Views
     public class CubeShooterView : MonoBehaviour
     {
         [SerializeField] private Collider _collider;
+        [SerializeField] private LineRenderer _line;
         
         private IHitPool _hitPool;
         
@@ -104,8 +106,18 @@ namespace Project.Scripts.GamePlay.Cube.Views
             if (_timeToShot == 0)
             {
                 RefreshCallDown();
+                StartCoroutine(ShotAnimationCoroutine());
                 _faceBonusData.Process(_currentAim.Data, CubeInfo);
             }
+        }
+
+        private IEnumerator ShotAnimationCoroutine()
+        {
+            _line.gameObject.SetActive(true);
+            _line.SetPosition(0, transform.position);
+            _line.SetPosition(1, _currentAim.Data.Transform.position);
+            yield return new WaitForSeconds(0.3f);
+            _line.gameObject.SetActive(false);
         }
 
         private void RefreshCallDown()

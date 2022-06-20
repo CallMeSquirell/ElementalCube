@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: EnemyConfig
   m_EditorClassIdentifier: 
   _enemies:
-  - _maxHealth: 15
+  - _maxHealth: 45
     _speed: 5
     _sprite: {fileID: 21300000, guid: 57885a31b538443eeb0d57aa86b9c7c4, type: 3}
     _prefab: {fileID: 7202884074669973186, guid: af009b76f76cf4936b04a69802c04fdf,
       type: 3}
     _enemyType: 0
     _element: 2
-  - _maxHealth: 15
+  - _maxHealth: 45
     _speed: 5
     _sprite: {fileID: 21300000, guid: 6d46825b67e754a93a26e4e58aa8d629, type: 3}
     _prefab: {fileID: 7202884074669973186, guid: af009b76f76cf4936b04a69802c04fdf,
       type: 3}
     _enemyType: 1
     _element: 1
-  - _maxHealth: 15
+  - _maxHealth: 45
     _speed: 5
     _sprite: {fileID: 21300000, guid: 6f76413373efe4f9088a2484fb9f1a7e, type: 3}
     _prefab: {fileID: 7202884074669973186, guid: af009b76f76cf4936b04a69802c04fdf,

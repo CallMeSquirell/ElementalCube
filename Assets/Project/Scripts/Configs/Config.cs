@@ -15,6 +15,7 @@ namespace Project.Scripts.Configs
         private const string LevelPath = "Assets/Project/Configs/LevelConfig.asset";
         private const string ElementPath = "Assets/Project/Configs/ElementConfig.asset";
         private const string PlayerConfig = "Assets/Project/Configs/PlayerConfig.asset";
+        private const string FaceListConfig = "Assets/Project/Configs/FaceListConfig.asset";
         
         private readonly IAssetManager _assetManager;
         private PromiseActionQueue _queue;
@@ -32,6 +33,7 @@ namespace Project.Scripts.Configs
             LoadConfig<ElementConfig>(ElementPath);
             LoadConfig<EnemyConfig>(EnemyPath);
             LoadConfig<PlayerConfig>(PlayerConfig);
+            LoadConfig<FaceListConfig>(FaceListConfig);
             return _queue;
         }
 
